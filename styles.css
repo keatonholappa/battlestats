@@ -34,7 +34,7 @@ body {
     display: inline-block;   
 }
 
-.accordion{
+.accordion h3{
     width: 100%;
     padding: 1%;
     display: block;    

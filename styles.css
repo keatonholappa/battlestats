@@ -7,15 +7,14 @@ body {
     --text-color: white;
     --bkgrnd-color: rgba(0,0,0,0.8);
     
-    background-color: rgba(0,0,0,0.8);
+    background-color: var(--bkgrnd-color);
 
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     font-size: 14px;
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
-    line-height: 26.4px;
-    color: --text-color;
+    color: var(--text-color);
 }
 
 .playerType {
@@ -28,7 +27,8 @@ body {
 }
 
 .typeHead {
-    border-bottom: thin solid --bkgrnd-color;
+    padding-bottom: 2px;
+    border-bottom: thin solid var(--bkgrnd-color);
 }
 
 

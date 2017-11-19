@@ -25,12 +25,18 @@ body {
     margin-top: 5px;
 }
 
+.playerType input{
+    float: right;   
+}
+
 .typeHead {
     padding: 2%;
     border-bottom: thin solid var(--bkgrnd-color);
 }
 
 .divTitle{
-    float:left;   
+    display: inline-block;   
 }
+
+
 

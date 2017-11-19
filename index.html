@@ -16,21 +16,44 @@
     <div class="playerType" id="Attacker"> 
       <div class="typeHead">
         <h2> Attacker </h2>
-        <input type="text" name="playerName" placeholder="Name">
+        <input type="text" name="attackerName" placeholder="Build Name">
         
         <input type="radio" name="attackType" /> Melee
         <input type="radio" name="attackType" /> Ranged
       </div>
+      
+      <div class="stats" id="attackerBaseStats">
+        <h3> Base Stats </h3>
+        <input type="text" name="attackerBaseName" placeholder="i.e. Character">
+      </div>
+      
+      <div  class="stats" id="attackerModifierStats">
+        <h3> Modifier Stats</h3>
+        <input type="text" name="attackerModiferName" placeholder="i.e. Armor, Weapon Bonus (not weapon dmg)">
+      </div>
+      
+      <div class="stats" id="attackerWeaponStats">
+        <h3> Weapon Damage </h3>
+        <input type="text" name="test" placeholder="placeholder">
       
     </div>
     
     <div class="playerType" id="Defender">
       <div class="typeHead">
         <h2> Defender </h2>
-        <input type="text" name="playerName" placeholder="Name">
+        <input type="text" name="defenderName" placeholder="Build Name">
       </div>
       
-    </div>
+        <div class="stats" id="defenderBaseStats">
+        <h3> Base Stats </h3>
+        <input type="text" name="attackerBaseName" placeholder="i.e. Character">
+      </div>
+      
+      <div  class="stats" id="defenderModifierStats">
+        <h3> Modifier Stats</h3>
+        <input type="text" name="defenderModiferName" placeholder="i.e. Armor, Weapon Bonus (not weapon damage)">
+      </div>
+      
   </body>
 
 </html>

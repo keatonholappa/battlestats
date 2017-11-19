@@ -37,6 +37,6 @@ body {
 .accordion{
     width: 100%;
     padding: 1%;
-    border-bottom: thin solid var(--bkgrnd-color);
+    display: block;    
 }
 

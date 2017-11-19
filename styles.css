@@ -26,9 +26,11 @@ body {
 }
 
 .typeHead {
-    display: inline;
-    padding: 2px;
+    padding: 2%;
     border-bottom: thin solid var(--bkgrnd-color);
 }
 
+.divTitle{
+    float:left;   
+}
 

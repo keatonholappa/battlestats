@@ -27,7 +27,7 @@ body {
 
 .typeHead {
     padding: 1%;
-    border-bottom: thick solid var(--bkgrnd-color);
+    border-bottom: thin solid var(--bkgrnd-color);
 }
 
 .divTitle{

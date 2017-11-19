@@ -1,5 +1,5 @@
 header{
-    margin: 5%;
+    margin: 2%;
 }
 
 body {
@@ -26,7 +26,7 @@ body {
 }
 
 .typeHead {
-    padding: 2%;
+    padding: 1%;
     border-bottom: thin solid var(--bkgrnd-color);
 }
 
@@ -36,6 +36,6 @@ body {
 
 .stats{
     width: 100%;
-    padding: 2%;
+    padding: 1%;
 }
 

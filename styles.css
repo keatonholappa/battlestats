@@ -36,13 +36,12 @@ body {
 
 .accordion h3{
     width: 100%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding: 10px;
 }
 
 .accordion .ui-accordion-content {
     max-width: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.3);
 }
 
 .accordion .ui-state-focus{

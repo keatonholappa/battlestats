@@ -5,7 +5,7 @@ function clearForm() {
   inputs = document.getElementsByTagName('input');
   for (index = 0; index < inputs.length; ++index) {
     if(inputs[index].id.includes("NumDice")){
-       // do nothing
+       inputs[index].value="0";
     } else {
     inputs[index].value="";
     }

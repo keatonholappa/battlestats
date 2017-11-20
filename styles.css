@@ -62,6 +62,7 @@ body {
 
 #outputHead{
     display: inline;   
+    padding: 1%;
 }
 
 #clearCellsButton{

@@ -41,6 +41,10 @@ body {
     border-bottom: thin solid rgba(0,0,0,0.8);
 }
 
+.accordion .ui-state-focus{
+    outline: none;
+}
+
 .statsTable{
     max-width: 100%;   
     border-radius: 1px;

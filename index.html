@@ -34,7 +34,7 @@
       
       <div class="accordion">
       
-        <h3 class="divTitle"> Base Stats: <input type="text" name="input" id="attackerBaseId" placeholder="Character Name"> </h3>
+        <h3 class="divTitle"> Base Attack: <input type="text" name="input" id="attackerBaseId" placeholder="Character Name"> </h3>
         <div>
         
           <table class="statsTable">
@@ -59,10 +59,33 @@
               <th> <input type="text" name="input" id="atkHP"> </th>
             </tr>    
           </table>
+          
+          <table class="statsTable">
+            <tr>
+              <th>Number of Dice</th>
+              <th>Type of Dice</th>
+              <th>Roll Modifier</th>
+
+            </tr>
+            <tr>
+              <th> <input type="text" name="input" id="attackNumDice" value="0"> </th>
+              <th>
+                <select name = "dropdown" id="attackDice">
+                  <option value="d4">d4</option>
+                  <option value="d6">d6</option>
+                  <option value="d8">d8</option>
+                  <option value="d10">d10</option>
+                  <option value="d12">d12</option>
+                  <option value="d20">d20</option>
+                </select>
+              </th>
+              <th> <input type="text" name="input" id="attackRollModifier"> </th>
+            </tr>    
+          </table>
         
         </div>
         
-        <h3 class="divTitle"> Modifier Stats: <input type="text" name="input" id="attackerModifierId" placeholder="Armor, Vehicle, Buff, etc."> </h3>
+        <h3 class="divTitle"> Modifier Attack: <input type="text" name="input" id="attackerModifierId" placeholder="Armor, Vehicle, Buff, etc."> </h3>
         
         <div>
         
@@ -88,6 +111,29 @@
               <th> <input type="text" name="input" id="atkHP_Mod"> </th>
             </tr>    
           </table>
+          
+          <table class="statsTable">
+            <tr>
+              <th>Number of Dice</th>
+              <th>Type of Dice</th>
+              <th>Roll Modifier</th>
+
+            </tr>
+            <tr>
+              <th> <input type="text" name="input" id="modifiedAttackNumDice" value="0"> </th>
+              <th>
+                <select name = "dropdown" id="ModifiedAttackDice">
+                  <option value="d4">d4</option>
+                  <option value="d6">d6</option>
+                  <option value="d8">d8</option>
+                  <option value="d10">d10</option>
+                  <option value="d12">d12</option>
+                  <option value="d20">d20</option>
+                </select>
+              </th>
+              <th> <input type="text" name="input" id="modifiedAttackRollModifier"> </th>
+            </tr>    
+          </table>
         
         </div>
           
@@ -103,9 +149,9 @@
 
             </tr>
             <tr>
-              <th> <input type="text" name="input" id="attackerNumDice"> </th>
+              <th> <input type="text" name="input" id="weaponNumDice" value="0"> </th>
               <th>
-                <select name = "dropdown" id="attackDiceType">
+                <select name = "dropdown" id="weaponAttackDice">
                   <option value="d4">d4</option>
                   <option value="d6">d6</option>
                   <option value="d8">d8</option>
@@ -114,7 +160,7 @@
                   <option value="d20">d20</option>
                 </select>
               </th>
-              <th> <input type="text" name="input" id="attackerWeaponModifier"> </th>
+              <th> <input type="text" name="input" id="weaponRollModifier"> </th>
             </tr>    
           </table>
         
@@ -132,7 +178,7 @@
       
       <div class="accordion">
       
-        <h3 class="divTitle"> Base Stats: <input type="text" name="input" id="defenderBaseId" placeholder="Character Name"> </h3>
+        <h3 class="divTitle"> Base Defence: <input type="text" name="input" id="defenderBaseId" placeholder="Character Name"> </h3>
         <div>
         
           <table class="statsTable">
@@ -157,10 +203,33 @@
               <th> <input type="text" name="input" id="defHP"> </th>
             </tr>    
           </table>
+          
+          <table class="statsTable">
+            <tr>
+              <th>Number of Dice</th>
+              <th>Type of Dice</th>
+              <th>Roll Modifier</th>
+
+            </tr>
+            <tr>
+              <th> <input type="text" name="input" id="defenceNumDice" value="0"> </th>
+              <th>
+                <select name = "dropdown" id="defenceDice">
+                  <option value="d4">d4</option>
+                  <option value="d6">d6</option>
+                  <option value="d8">d8</option>
+                  <option value="d10">d10</option>
+                  <option value="d12">d12</option>
+                  <option value="d20">d20</option>
+                </select>
+              </th>
+              <th> <input type="text" name="input" id="defenceRollModifier"> </th>
+            </tr>    
+          </table>
         
         </div>
         
-        <h3 class="divTitle"> Modifier Stats: <input type="text" name="input" name="defenderModifierId" placeholder="Armor, Vehicle, Buff, etc."> </h3>
+        <h3 class="divTitle"> Modifier Defence: <input type="text" name="input" name="defenderModifierId" placeholder="Armor, Vehicle, Buff, etc."> </h3>
         
         <div>
         
@@ -184,6 +253,29 @@
               <th> <input type="text" name="input" id="defArm_Mod"> </th>
               <th> <input type="text" name="input" id="defCmd_Mod"> </th>
               <th> <input type="text" name="input" id="defHP_Mod"> </th>
+            </tr>    
+          </table>
+          
+          <table class="statsTable">
+            <tr>
+              <th>Number of Dice</th>
+              <th>Type of Dice</th>
+              <th>Roll Modifier</th>
+
+            </tr>
+            <tr>
+              <th> <input type="text" name="input" id="modifiedDefenceNumDice" value="0"> </th>
+              <th>
+                <select name = "dropdown" id="modifiedDefenceDice">
+                  <option value="d4">d4</option>
+                  <option value="d6">d6</option>
+                  <option value="d8">d8</option>
+                  <option value="d10">d10</option>
+                  <option value="d12">d12</option>
+                  <option value="d20">d20</option>
+                </select>
+              </th>
+              <th> <input type="text" name="input" id="modifiedDefenceRollModifier"> </th>
             </tr>    
           </table>
         

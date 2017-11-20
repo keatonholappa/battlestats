@@ -63,3 +63,7 @@ body {
 #outputHead{
     display: inline;   
 }
+
+#clearCellsButton{
+    float: right;
+}

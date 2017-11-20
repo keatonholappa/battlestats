@@ -40,7 +40,8 @@ body {
     padding-bottom: 2%;
 }
 
-.accordion div{
+.accordion .ui-accordion-content {
+    max-width: 100%;
     background-color: rgba(0,0,0,0.7);
 }
 
@@ -48,10 +49,6 @@ body {
     outline: none;
 }
 
-.statsTable{
-    max-width: 100%;   
-    
-}
 .statsTable input[type="text"] {
     border-radius: 1px;
 }

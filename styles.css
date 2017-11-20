@@ -27,7 +27,6 @@ body {
 
 .typeHead {
     padding: 1%;
-    border-bottom: thin solid rgba(0,0,0,0.8);
 }
 
 .divTitle{
@@ -44,7 +43,7 @@ body {
     max-width: 100%;
     padding-top: 7px;
     padding-bottom: 7px;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.2);
 }
 
 .accordion .ui-state-focus{

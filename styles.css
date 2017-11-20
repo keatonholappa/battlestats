@@ -35,12 +35,15 @@ body {
 }
 
 .accordion h3{
+    margin-top: 2px;
     width: 100%;
     padding: 10px;
 }
 
 .accordion .ui-accordion-content {
     max-width: 100%;
+    padding-top: 7px;
+    padding-bottom: 7px;
     background-color: rgba(0,0,0,0.3);
 }
 

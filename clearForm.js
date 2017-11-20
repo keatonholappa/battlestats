@@ -15,5 +15,9 @@ function clearForm() {
   }
   
   //set dropdowns to their default values
-  document.getElementsByTagName('dropdown').val('0');
+  var inputs, index;
+  inputs = document.getElementsByTagName('dropdown');
+  for (index = 0; index < inputs.length; ++index) {
+    inputs[index].val('0');
+  }
 }

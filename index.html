@@ -25,7 +25,7 @@
     <div class="playerType" id="Attacker"> 
       <div class="typeHead">
         <h2 class="divTitle"> Attacker: </h2>
-        <input type="text" name="attackerName" placeholder="Build Name">
+        <input type="text" name="input" id="attackerId" placeholder="Build Name">
         
         <input type="radio" name="attackType" /> Melee
         <input type="radio" name="attackType" /> Ranged
@@ -33,7 +33,7 @@
       
       <div class="accordion">
       
-        <h3 class="divTitle"> Base Stats: <input type="text" name="attackerBaseName" placeholder="Character Name"> </h3>
+        <h3 class="divTitle"> Base Stats: <input type="text" name="input" id="attackerBaseId" placeholder="Character Name"> </h3>
         <div>
         
           <table class="statsTable">
@@ -48,20 +48,20 @@
               <th>Total HP</th>
             </tr>
             <tr>
-              <th> <input type="text" id="atkSpd"> </th>
-              <th> <input type="text" id="atkStr"> </th>
-              <th> <input type="text" id="atkMel"> </th>
-              <th> <input type="text" id="atkRng"> </th>
-              <th> <input type="text" id="atkDef"> </th>
-              <th> <input type="text" id="atkArm"> </th>
-              <th> <input type="text" id="atkCmd"> </th>
-              <th> <input type="text" id="atkHP"> </th>
+              <th> <input type="text" name="input" id="atkSpd"> </th>
+              <th> <input type="text" name="input" id="atkStr"> </th>
+              <th> <input type="text" name="input" id="atkMel"> </th>
+              <th> <input type="text" name="input" id="atkRng"> </th>
+              <th> <input type="text" name="input" id="atkDef"> </th>
+              <th> <input type="text" name="input" id="atkArm"> </th>
+              <th> <input type="text" name="input" id="atkCmd"> </th>
+              <th> <input type="text" name="input" id="atkHP"> </th>
             </tr>    
           </table>
         
         </div>
         
-        <h3 class="divTitle"> Modifier Stats: <input type="text" name="attackerModifierName" placeholder="Armor, Vehicle, Buff, etc."> </h3>
+        <h3 class="divTitle"> Modifier Stats: <input type="text" name="input" id="attackerModifierId" placeholder="Armor, Vehicle, Buff, etc."> </h3>
         
         <div>
         
@@ -77,20 +77,20 @@
               <th>Total HP</th>
             </tr>
             <tr>
-              <th> <input type="text" id="atkSpd_Mod"> </th>
-              <th> <input type="text" id="atkStr_Mod"> </th>
-              <th> <input type="text" id="atkMel_Mod"> </th>
-              <th> <input type="text" id="atkRng_Mod"> </th>
-              <th> <input type="text" id="atkDef_Mod"> </th>
-              <th> <input type="text" id="atkArm_Mod"> </th>
-              <th> <input type="text" id="atkCmd_Mod"> </th>
-              <th> <input type="text" id="atkHP_Mod"> </th>
+              <th> <input type="text" name="input" id="atkSpd_Mod"> </th>
+              <th> <input type="text" name="input" id="atkStr_Mod"> </th>
+              <th> <input type="text" name="input" id="atkMel_Mod"> </th>
+              <th> <input type="text" name="input" id="atkRng_Mod"> </th>
+              <th> <input type="text" name="input" id="atkDef_Mod"> </th>
+              <th> <input type="text" name="input" id="atkArm_Mod"> </th>
+              <th> <input type="text" name="input" id="atkCmd_Mod"> </th>
+              <th> <input type="text" name="input" id="atkHP_Mod"> </th>
             </tr>    
           </table>
         
         </div>
           
-        <h3 class="divTitle"> Weapon Damage: <input type="text" name="attackerWeaponName" placeholder="Weapon Name"> </h3>
+        <h3 class="divTitle"> Weapon Damage: <input type="text" name="input" id="attackerWeaponId" placeholder="Weapon Name"> </h3>
         
         <div>
         
@@ -102,7 +102,7 @@
 
             </tr>
             <tr>
-              <th> <input type="text" name="attackerNumDice"> </th>
+              <th> <input type="text" name="input" id="attackerNumDice"> </th>
               <th>
                 <select id="attackDiceType">
                   <option value="d4">d4</option>
@@ -113,7 +113,7 @@
                   <option value="d20">d20</option>
                 </select>
               </th>
-              <th> <input type="text" name="attackerWeaponModifier"> </th>
+              <th> <input type="text" name="input" id="attackerWeaponModifier"> </th>
             </tr>    
           </table>
         
@@ -126,12 +126,12 @@
     <div class="playerType" id="Defender">
       <div class="typeHead">
         <h2 class="divTitle"> Defender: </h2>
-        <input type="text" name="defenderName" placeholder="Build Name">
+        <input type="text" name="input" name="defenderId" placeholder="Build Name">
       </div>
       
       <div class="accordion">
       
-        <h3 class="divTitle"> Base Stats: <input type="text" name="defenderBaseName" placeholder="Character Name"> </h3>
+        <h3 class="divTitle"> Base Stats: <input type="text" name="input" id="defenderBaseId" placeholder="Character Name"> </h3>
         <div>
         
           <table class="statsTable">
@@ -146,20 +146,20 @@
               <th>Total HP</th>
             </tr>
             <tr>
-             <th> <input type="text" id="defSpd"> </th>
-              <th> <input type="text" id="defStr"> </th>
-              <th> <input type="text" id="defMel"> </th>
-              <th> <input type="text" id="defRng"> </th>
-              <th> <input type="text" id="defDef"> </th>
-              <th> <input type="text" id="defArm"> </th>
-              <th> <input type="text" id="defCmd"> </th>
-              <th> <input type="text" id="defHP"> </th>
+              <th> <input type="text" name="input" id="defSpd"> </th>
+              <th> <input type="text" name="input" id="defStr"> </th>
+              <th> <input type="text" name="input" id="defMel"> </th>
+              <th> <input type="text" name="input" id="defRng"> </th>
+              <th> <input type="text" name="input" id="defDef"> </th>
+              <th> <input type="text" name="input" id="defArm"> </th>
+              <th> <input type="text" name="input" id="defCmd"> </th>
+              <th> <input type="text" name="input" id="defHP"> </th>
             </tr>    
           </table>
         
         </div>
         
-        <h3 class="divTitle"> Modifier Stats: <input type="text" name="defenderModifierName" placeholder="Armor, Vehicle, Buff, etc."> </h3>
+        <h3 class="divTitle"> Modifier Stats: <input type="text" name="input" name="defenderModifierId" placeholder="Armor, Vehicle, Buff, etc."> </h3>
         
         <div>
         
@@ -175,14 +175,14 @@
               <th>Total HP</th>
             </tr>
             <tr>
-              <th> <input type="text" id="defSpd_Mod"> </th>
-              <th> <input type="text" id="defStr_Mod"> </th>
-              <th> <input type="text" id="defMel_Mod"> </th>
-              <th> <input type="text" id="defRng_Mod"> </th>
-              <th> <input type="text" id="defDef_Mod"> </th>
-              <th> <input type="text" id="defArm_Mod"> </th>
-              <th> <input type="text" id="defCmd_Mod"> </th>
-              <th> <input type="text" id="defHP_Mod"> </th>
+              <th> <input type="text" name="input" id="defSpd_Mod"> </th>
+              <th> <input type="text" name="input" id="defStr_Mod"> </th>
+              <th> <input type="text" name="input" id="defMel_Mod"> </th>
+              <th> <input type="text" name="input" id="defRng_Mod"> </th>
+              <th> <input type="text" name="input" id="defDef_Mod"> </th>
+              <th> <input type="text" name="input" id="defArm_Mod"> </th>
+              <th> <input type="text" name="input" id="defCmd_Mod"> </th>
+              <th> <input type="text" name="input" id="defHP_Mod"> </th>
             </tr>    
           </table>
         
@@ -195,7 +195,7 @@
       <div class="typeHead" id="outputHead">
         <h2 class="divTitle"> Output: </h2>
         <h4> Enter number of battles to simulate: </h4>
-        <input type="text" id="defMel" placeholder="Enter 1-1000">
+        <input type="text" name="input" id="defMel" placeholder="Enter 1-1000">
         <button id="calculateButton" onClick="alert("placeholder for calculating function")"> Calculate </button>
         <button id="clearCellsButton" onClick="alert("placeholder for clearing function")"> Clear Cells </button>
         

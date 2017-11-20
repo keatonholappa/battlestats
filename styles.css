@@ -63,8 +63,3 @@ body {
 #outputHead{
     display: inline-block;
 }
-
-#clearCellsButton{
-    position: absolute;
-    float: right;
-}

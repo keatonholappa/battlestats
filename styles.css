@@ -40,3 +40,7 @@ body {
     padding-bottom: 2%;
     border-bottom: thin solid rgba(0,0,0,0.8);
 }
+
+.statsTable{
+    max-width: 100%;   
+}

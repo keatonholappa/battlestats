@@ -38,7 +38,10 @@ body {
     width: 100%;
     padding-top: 2%;
     padding-bottom: 2%;
-    border-bottom: thin solid rgba(0,0,0,0.8);
+}
+
+.accordion div{
+    background-color: rgba(0,0,0,0.7);
 }
 
 .accordion .ui-state-focus{
@@ -50,6 +53,5 @@ body {
     
 }
 .statsTable input[type="text"] {
-    width: 12.5%;
     border-radius: 1px;
 }

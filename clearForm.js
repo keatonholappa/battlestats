@@ -4,7 +4,11 @@ function clearForm() {
   var inputs, index;
   inputs = document.getElementsByTagName('input');
   for (index = 0; index < inputs.length; ++index) {
+    if(inputs[index].id.includes("NumDice")){
+       // do nothing
+    } else {
     inputs[index].value="";
+    }
   }
   
   // reset the radio buttons

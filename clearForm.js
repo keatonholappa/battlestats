@@ -1,4 +1,4 @@
-function clearCells() {
+function clearForm() {
 
   // clear all of the text input fields
   var inputs, index;

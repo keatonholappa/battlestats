@@ -36,5 +36,5 @@ body {
 
 .accordion h3{
     width: 100%;
-    border: thin solid var(--bkgrnd-color);
+    border-bottom: thin solid var(--bkgrnd-color);
 }

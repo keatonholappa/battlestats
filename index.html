@@ -22,6 +22,8 @@
   </header>
 
   <body>
+    
+    <!-- Attacker Section -->
     <div class="playerType" id="Attacker"> 
       <div class="typeHead">
         <h2 class="divTitle"> Attacker: </h2>
@@ -33,7 +35,7 @@
       
       <div class="accordion">
       
-        <h3 class="divTitle"> Base Stats: <input type="text" name="attackerBaseName" placeholder="i.e. Character"> </h3>
+        <h3 class="divTitle"> Base Stats: <input type="text" name="attackerBaseName" placeholder="Character Name"> </h3>
         <div>
         
           <table class="statsTable">
@@ -48,20 +50,20 @@
               <th>Total HP</th>
             </tr>
             <tr>
-              <th> <input type="text" name="attackerSpeedStat"> </th>
-              <th> <input type="text" name="attackerStrengthStat"> </th>
-              <th> <input type="text" name="attackerMeleeAttackStat"> </th>
-              <th> <input type="text" name="attackerRangedAttackStat"> </th>
-              <th> <input type="text" name="attackerDefenseStat"> </th>
-              <th> <input type="text" name="attackerArmorStat"> </th>
-              <th> <input type="text" name="attackerCommandStat"> </th>
-              <th> <input type="text" name="attackerTotalHPStat"> </th>
+              <th> <input type="text" id="atkSpd"> </th>
+              <th> <input type="text" id="atkStr"> </th>
+              <th> <input type="text" id="atkMel"> </th>
+              <th> <input type="text" id="atkRng"> </th>
+              <th> <input type="text" id="atkDef"> </th>
+              <th> <input type="text" id="atkArm"> </th>
+              <th> <input type="text" id="atkCmd"> </th>
+              <th> <input type="text" id="atkHP"> </th>
             </tr>    
           </table>
         
         </div>
         
-        <h3 class="divTitle"> Modifier Stats: <input type="text" name="attackerModifierName" placeholder="i.e. Armor, Vehicle, Buff"> </h3>
+        <h3 class="divTitle"> Modifier Stats: <input type="text" name="attackerModifierName" placeholder="Armor, Vehicle, Buff, etc."> </h3>
         
         <div>
         
@@ -77,14 +79,14 @@
               <th>Total HP</th>
             </tr>
             <tr>
-              <th> <input type="text" name="attackerSpeedStat"> </th>
-              <th> <input type="text" name="attackerStrengthStat"> </th>
-              <th> <input type="text" name="attackerMeleeAttackStat"> </th>
-              <th> <input type="text" name="attackerRangedAttackStat"> </th>
-              <th> <input type="text" name="attackerDefenseStat"> </th>
-              <th> <input type="text" name="attackerArmorStat"> </th>
-              <th> <input type="text" name="attackerCommandStat"> </th>
-              <th> <input type="text" name="attackerTotalHPStat"> </th>
+              <th> <input type="text" id="atkSpd_Mod"> </th>
+              <th> <input type="text" id="atkStr_Mod"> </th>
+              <th> <input type="text" id="atkMel_Mod"> </th>
+              <th> <input type="text" id="atkRng_Mod"> </th>
+              <th> <input type="text" id="atkDef_Mod"> </th>
+              <th> <input type="text" id="atkArm_Mod"> </th>
+              <th> <input type="text" id="atkCmd_Mod"> </th>
+              <th> <input type="text" id="atkHP_Mod"> </th>
             </tr>    
           </table>
         
@@ -122,22 +124,72 @@
       </div>
     </div>
     
+    <!-- Defender Section -->
     <div class="playerType" id="Defender">
       <div class="typeHead">
         <h2 class="divTitle"> Defender: </h2>
         <input type="text" name="defenderName" placeholder="Build Name">
       </div>
       
-      <div class="stats" id="defenderBaseStats">
-        <h3 class="divTitle"> Base Stats: </h3>
-        <input type="text" name="attackerBaseName" placeholder="i.e. Character">
-      </div>
+      <div class="accordion">
       
-      <div  class="stats" id="defenderModifierStats">
-        <h3 class="divTitle"> Modifier Stats: </h3>
-        <input type="text" name="defenderModiferName" placeholder="i.e. Armor, Vehicle, Buff">
+        <h3 class="divTitle"> Base Stats: <input type="text" name="defenderBaseName" placeholder="Character Name"> </h3>
+        <div>
+        
+          <table class="statsTable">
+            <tr>
+              <th>Speed</th>
+              <th>Strength</th>
+              <th>Melee Attack</th>
+              <th>Ranged Attack</th>
+              <th>Defense</th>
+              <th>Armor</th>
+              <th>Command</th>
+              <th>Total HP</th>
+            </tr>
+            <tr>
+             <th> <input type="text" id="defSpd"> </th>
+              <th> <input type="text" id="defStr"> </th>
+              <th> <input type="text" id="defMel"> </th>
+              <th> <input type="text" id="defRng"> </th>
+              <th> <input type="text" id="defDef"> </th>
+              <th> <input type="text" id="defArm"> </th>
+              <th> <input type="text" id="defCmd"> </th>
+              <th> <input type="text" id="defHP"> </th>
+            </tr>    
+          </table>
+        
+        </div>
+        
+        <h3 class="divTitle"> Modifier Stats: <input type="text" name="defenderModifierName" placeholder="Armor, Vehicle, Buff, etc."> </h3>
+        
+        <div>
+        
+          <table class="statsTable">
+            <tr>
+              <th>Speed</th>
+              <th>Strength</th>
+              <th>Melee Attack</th>
+              <th>Ranged Attack</th>
+              <th>Defense</th>
+              <th>Armor</th>
+              <th>Command</th>
+              <th>Total HP</th>
+            </tr>
+            <tr>
+              <th> <input type="text" id="defSpd_Mod"> </th>
+              <th> <input type="text" id="defStr_Mod"> </th>
+              <th> <input type="text" id="defMel_Mod"> </th>
+              <th> <input type="text" id="defRng_Mod"> </th>
+              <th> <input type="text" id="defDef_Mod"> </th>
+              <th> <input type="text" id="defArm_Mod"> </th>
+              <th> <input type="text" id="defCmd_Mod"> </th>
+              <th> <input type="text" id="defHP_Mod"> </th>
+            </tr>    
+          </table>
+        
+        </div>
       </div>
-      
     </div>
       
   </body>

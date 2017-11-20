@@ -24,6 +24,7 @@ body {
     height: 30%;
     margin-top: 5px;
     margin-left: 2.5%;
+    display: table;
 }
 
 .typeHead {

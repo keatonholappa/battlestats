@@ -27,7 +27,7 @@ body {
 
 .typeHead {
     padding: 1%;
-    border-bottom: thin solid var(--bkgrnd-color);
+    border-bottom: thin solid rgba(0,0,0,0.8);
 }
 
 .divTitle{
@@ -36,5 +36,7 @@ body {
 
 .accordion h3{
     width: 100%;
-    border-bottom: thin solid var(--bkgrnd-color);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-bottom: thin solid rgba(0,0,0,0.8);
 }

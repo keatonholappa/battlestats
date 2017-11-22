@@ -1,7 +1,7 @@
 /* This file contains the functions required to calculate the results of the battle simulation
 *
 */
-
+/**
 function generatePlayer(playerType){
   // initialize vars
   var buildNameVal = [], baseLims = [], modLims = [];
@@ -25,12 +25,12 @@ function generatePlayer(playerType){
   }
   
   // create a new player object and its properties
-  var player = { /*
+  var player = { 
     buildName: getDesiredValues(buildNameVal),
     attackType: getAttackType(),
     baseStats: getDesiredValues(baseLims),
     modifiedStats: getDesiredValues(modLims)
-*/  };
+  };
 }
 
 
@@ -113,7 +113,7 @@ function calculateDieRoll(qty, type, modifier) {
   return totalRoll;
 }
 
-
+**/
 // defines a function to calculate the results of the battle simulation
 function calculateOutput() {
   

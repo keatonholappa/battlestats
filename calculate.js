@@ -2,6 +2,38 @@
 *
 */
 
+function generatePlayers(playerType){
+  
+  // set the correct values based on the playerType
+  switch(playerType) {
+      case(playerType = "attacker"):
+      var buildNameVal = 0;
+      
+      break;
+      
+      case(playerType = "defender"):
+      
+      
+      break;
+  
+  // create a new player object and its properties
+  var player = {
+      buildName: getInputFieldValues(buildNameVal),
+      attackType: getAttackType(),
+      baseStats: getDesiredValues(),
+      modifiedStats: getDesiredValues()
+  };
+  
+  
+}
+
+// defines a function to separate out the desired input value
+function getDesiredValues(){
+  var allValues = getInputFieldValues(); 
+  
+}
+
+
 // defines a function to get the value in every input field
 function getInputFieldValues(){
   var inputs, index, allInputs;
@@ -23,6 +55,8 @@ function getAttackType() {
     attackType = "melee";
   } else if (rangedAttack.checked == true) {
     attackType = "ranged";
+  } else {
+    attackType = "null"; 
   }
   return attackType;
 }
@@ -43,8 +77,7 @@ function calculateDieRoll(qty, type, modifier) {
     var roll = Math.floor(Math.random() * type) + 1 + modifier;
     totalRoll = Number(totalRoll + roll);
   }
-  
-  alert(totalRoll);
+  return totalRoll;
 }
 
 // defines a function to calculate the results of the battle simulation

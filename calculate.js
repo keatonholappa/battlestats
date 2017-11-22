@@ -29,14 +29,23 @@ function generatePlayer(playerType){
     modifiedStats: getDesiredValues(modLims)
   };
 }
+
+
 // defines a function to separate out the desired input value
-function getDesiredValues(lowerLimit, upperLimit){
+function getDesiredValues(limits){
+  var lowerLimit = limits[0];
+  var upperLimit = limits[1];
   // get all values
   var allValues = getInputFieldValues(); 
   var desiredValues = [];
   // get only the desired values
   for (var index = lowerLimit; index < upperLimit; ++index) {
-    desiredValues[index] = allValues[index];
+    if(inputEmpty(allValues[index])){
+      writeErrorMsg(this.buildName + " is missing an input value.");
+      break;
+    } else {
+      desiredValues[index] = allValues[index];
+    }
   }
 }
 
@@ -51,6 +60,7 @@ function getInputFieldValues(){
   }
   return allInputs;
 }
+
 
 // defines a function to determine if the attacker is using melee or ranged attacks
 function getAttackType() {
@@ -68,6 +78,7 @@ function getAttackType() {
   }
   return attackType;
 }
+
 
 // defines a function to roll a die
 function calculateDieRoll(qty, type, modifier) { 
@@ -88,6 +99,7 @@ function calculateDieRoll(qty, type, modifier) {
   return totalRoll;
 }
 
+
 // defines a function to calculate the results of the battle simulation
 function calculateOutput() {
   
@@ -103,6 +115,7 @@ function calculateOutput() {
 
 }
   
+
 // defines a function to check if a input field is empty
 function inputEmpty(inputId){
   if(document.getElementById(inputId).value == "") {

@@ -26,10 +26,12 @@ function generatePlayer(playerType){
   
   // create a new player object and its properties
   var player = { 
-    buildName: getDesiredValues(buildNameVal),
-    attackType: getAttackType(),
-    baseStats: getDesiredValues(baseLims),
-    modifiedStats: getDesiredValues(modLims)
+    buildName: "buildNameTest",
+    test: "test"
+    //buildName: getDesiredValues(buildNameVal),
+    //attackType: getAttackType(),
+    //baseStats: getDesiredValues(baseLims),
+    //modifiedStats: getDesiredValues(modLims)
   };
 }
 
@@ -124,6 +126,7 @@ function calculateOutput() {
   } else {
     generatePlayer("attacker");
     generatePlayer("defender");
+    alert("generated players");
   }
   
   // do the analytics

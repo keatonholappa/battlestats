@@ -12,11 +12,8 @@ function clearForm() {
   }
   
   // reset the radio buttons
-  var inputs, index;
-  inputs = document.getElementsByTagName('radioButton');
-  for (index = 0; index < inputs.length; ++index) {
-    inputs[index].checked=false;
-  }
+  document.getElementById('meleeAttack').checked = false;
+  document.getElementById('rangedAttack').checked = false;
   
   //set dropdowns to their default values
   var inputs, index;

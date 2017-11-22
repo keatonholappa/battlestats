@@ -54,7 +54,7 @@ function getDesiredValues(limits){
   for (var index = lowerLimit; index < upperLimit; ++index) {
     if(inputEmpty(allValues[index])){
       writeErrorMsg(this.buildName + " is missing an input value.");
-      break;
+      desiredValues[index] = 0;
     } else {
       desiredValues[index] = allValues[index];
     }
@@ -86,7 +86,8 @@ function getAttackType() {
   } else if (rangedAttack.checked == true) {
     attackType = "ranged";
   } else {
-    attackType = "null"; 
+    writeErrorMsg("Please select and Attack Type");
+    attackType = "";
   }
   return attackType;
 }
@@ -122,8 +123,8 @@ function calculateOutput() {
   if(inputEmpty("attackerId") || inputEmpty("defenderId")){
     writeErrorMsg("You must enter values for the attacker and defender");
   } else {
-    //generatePlayer("attacker");
-    //generatePlayer("defender");
+    generatePlayer("attacker");
+    generatePlayer("defender");
   }
   
   // do the analytics

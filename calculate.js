@@ -24,6 +24,8 @@ function generatePlayer(playerType){
       break;
   }
   
+  alert(playerType);
+  
   // create a new player object and its properties
   var player = { 
     buildName: getDesiredValues(buildNameVal),
@@ -45,8 +47,6 @@ function getDesiredValues(limits){
   } else {
     upperLimit = limits[1];
   }
-  
-  alert(lowerLimit + " , " + upperLimit);
   
   // get all values
   var allValues = getInputFieldValues(); 

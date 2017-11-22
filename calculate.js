@@ -92,7 +92,7 @@ function calculateDieRoll(qty, type, modifier) {
 function calculateOutput() {
   
   // create the players
-  if(!checkInput("attackerId") || !checkInput("defenderId")){
+  if(inputEmpty("attackerId") || inputEmpty("defenderId")){
     writeErrorMsg("You must enter values for the attacker and defender");
   } else {
     generatePlayer("attacker");

@@ -4,20 +4,20 @@
 
 function generatePlayer(playerType){
   // initialize vars
-  var buildNameVal, baseLims, modLims;
+  var buildNameVal = [], baseLims = [], modLims = [];
   
   // set the correct values based on the playerType
   switch(playerType) {
     case(playerType == "attacker"):
       alert("creating attacker player");
-      buildNameVal = 0;
+      buildNameVal = [0];
       baseLims = [2,9];
       modLims = [13,20];
       break;
       
     case(playerType == "defender"):
       alert("creating defender player");
-      buildNameVal = 26;
+      buildNameVal = [26];
       baseLims = [28,35];
       modLims = [39,46];
       break;
@@ -36,7 +36,14 @@ function generatePlayer(playerType){
 // defines a function to separate out the desired input value
 function getDesiredValues(limits){
   var lowerLimit = limits[0];
-  var upperLimit = limits[1];
+  var upperLimit[];
+  
+  // if only 1 value is put into the function, correct for the for loop
+  if(limits[1] === undefined) {
+    upperLimit = lowerLimit + 1;
+  } else {
+    upperLimit = limits[1];
+  }
   
   alert(lowerLimit + " , " + upperLimit);
   

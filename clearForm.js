@@ -1,4 +1,6 @@
 function clearForm() {
+  
+  alert("clearing form");
 
   // clear all of the text input fields
   var inputs, index;

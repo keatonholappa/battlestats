@@ -25,7 +25,7 @@ function generatePlayer(playerType){
   
   // create a new player object and its properties
   var player = {
-    buildName: getInputFieldValues(buildNameVal),
+    buildName: getDesiredValues(buildNameVal),
     attackType: getAttackType(),
     baseStats: getDesiredValues(baseLims),
     modifiedStats: getDesiredValues(modLims)

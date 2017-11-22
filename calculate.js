@@ -9,12 +9,14 @@ function generatePlayer(playerType){
   // set the correct values based on the playerType
   switch(playerType) {
     case(playerType == "attacker"):
+      alert("creating attacker player");
       buildNameVal = 0;
       baseLims = [2,9];
       modLims = [13,20];
       break;
       
     case(playerType == "defender"):
+      alert("creating defender player");
       buildNameVal = 26;
       baseLims = [28,35];
       modLims = [39,46];
@@ -35,6 +37,9 @@ function generatePlayer(playerType){
 function getDesiredValues(limits){
   var lowerLimit = limits[0];
   var upperLimit = limits[1];
+  
+  alert(lowerLimit + " , " + upperLimit);
+  
   // get all values
   var allValues = getInputFieldValues(); 
   var desiredValues = [];

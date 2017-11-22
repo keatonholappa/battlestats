@@ -24,4 +24,7 @@ function clearForm() {
   for (index = 0; index < inputs.length; ++index) {
     inputs[index].val('0');
   }
+  
+  // clear the error message
+  document.getElementById("errorMsg").innerHTML="";
 }

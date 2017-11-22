@@ -135,7 +135,7 @@ function calculateOutput() {
   alert("test 3");
   
   // do the analytics
-  writeErrorMsg(attacker.buildName);
+  //writeErrorMsg(attacker.buildName);
 }
   
 

@@ -24,8 +24,6 @@ function generatePlayer(playerType){
       break;
   }
   
-  alert(playerType);
-  
   // create a new player object and its properties
   var player = { 
     buildName: getDesiredValues(buildNameVal),
@@ -129,7 +127,7 @@ function calculateOutput() {
   }
   
   // do the analytics
-  //writeErrorMsg(attacker.buildName);
+  writeErrorMsg(attacker.buildName);
 }
   
 

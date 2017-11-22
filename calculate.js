@@ -35,7 +35,7 @@ function generatePlayer(playerType){
   }
 }
 
-
+/*
 // defines a function to separate out the desired input value
 function getDesiredValues(limits){
   var lowerLimit = limits[0];
@@ -113,7 +113,7 @@ function calculateDieRoll(qty, type, modifier) {
   return totalRoll;
 }
 
-  
+*/
 // defines a function to calculate the results of the battle simulation
 function calculateOutput() {
   

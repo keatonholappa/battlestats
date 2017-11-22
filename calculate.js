@@ -122,8 +122,8 @@ function calculateOutput() {
   if(inputEmpty("attackerId") || inputEmpty("defenderId")){
     writeErrorMsg("You must enter values for the attacker and defender");
   } else {
-    generatePlayer("attacker");
-    generatePlayer("defender");
+    //generatePlayer("attacker");
+    //generatePlayer("defender");
   }
   
   // do the analytics

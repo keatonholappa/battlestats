@@ -127,7 +127,7 @@ function calculateOutput() {
   }
   
   // do the analytics
-
+  writeErrorMsg(attacker.buildName);
 }
   
 

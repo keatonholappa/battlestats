@@ -8,6 +8,7 @@ function generatePlayer(playerType){
   
   // set the correct values based on the playerType
   switch(playerType) {
+    alert("looking for player type");
     case(playerType == "attacker"):
       alert("creating attacker player");
       buildNameVal = [0];
@@ -24,12 +25,12 @@ function generatePlayer(playerType){
   }
   
   // create a new player object and its properties
-  var player = {
+  var player = { /*
     buildName: getDesiredValues(buildNameVal),
     attackType: getAttackType(),
     baseStats: getDesiredValues(baseLims),
     modifiedStats: getDesiredValues(modLims)
-  };
+*/  };
 }
 
 

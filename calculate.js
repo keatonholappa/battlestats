@@ -8,27 +8,27 @@ function generatePlayer(playerType){
   
   // set the correct values based on the playerType
   switch(playerType) {
-      case(playerType == "attacker"):
-        buildNameVal = 0;
-        baseLims = [2,9];
-        modLims = [13,20];
-        break;
+    case(playerType == "attacker"):
+      buildNameVal = 0;
+      baseLims = [2,9];
+      modLims = [13,20];
+      break;
       
-      case(playerType == "defender"):
-        buildNameVal = 26;
-        baseLims = [28,35];
-        modLims = [39,46];
-        break;
+    case(playerType == "defender"):
+      buildNameVal = 26;
+      baseLims = [28,35];
+      modLims = [39,46];
+      break;
+  }
   
   // create a new player object and its properties
   var player = {
-      buildName: getInputFieldValues(buildNameVal),
-      attackType: getAttackType(),
-      baseStats: getDesiredValues(baseLims),
-      modifiedStats: getDesiredValues(modLims)
+    buildName: getInputFieldValues(buildNameVal),
+    attackType: getAttackType(),
+    baseStats: getDesiredValues(baseLims),
+    modifiedStats: getDesiredValues(modLims)
   };
 }
-
 // defines a function to separate out the desired input value
 function getDesiredValues(lowerLimit, upperLimit){
   // get all values

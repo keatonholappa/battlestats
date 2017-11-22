@@ -32,7 +32,7 @@ function generatePlayer(playerType){
     //attackType: getAttackType(),
     //baseStats: getDesiredValues(baseLims),
     //modifiedStats: getDesiredValues(modLims)
-  //};
+  }
 }
 
 

@@ -26,5 +26,5 @@ function clearForm() {
   }
   
   // clear the error message
-  document.getElementById("errorMsg").innerHTML="";
+  document.getElementById("errorMsg").innerHTML= "";
 }

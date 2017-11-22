@@ -2,41 +2,49 @@
 *
 */
 
-function generatePlayers(playerType){
+function generatePlayer(playerType){
+  // initialize vars
+  var buildNameVal, baseLims, modLims;
   
   // set the correct values based on the playerType
   switch(playerType) {
-      case(playerType = "attacker"):
-      var buildNameVal = 0;
+      case(playerType == "attacker"):
+        buildNameVal = 0;
+        baseLims = [2,9];
+        modLims = [13,20];
+        break;
       
-      break;
-      
-      case(playerType = "defender"):
-      
-      
-      break;
+      case(playerType == "defender"):
+        buildNameVal = 26;
+        baseLims = [28,35];
+        modLims = [39,46];
+        break;
   
   // create a new player object and its properties
   var player = {
       buildName: getInputFieldValues(buildNameVal),
       attackType: getAttackType(),
-      baseStats: getDesiredValues(),
-      modifiedStats: getDesiredValues()
+      baseStats: getDesiredValues(baseLims),
+      modifiedStats: getDesiredValues(modLims)
   };
-  
-  
 }
 
 // defines a function to separate out the desired input value
-function getDesiredValues(){
+function getDesiredValues(lowerLimit, upperLimit){
+  // get all values
   var allValues = getInputFieldValues(); 
-  
+  var desiredValues = [];
+  // get only the desired values
+  for (var index = lowerLimit; index < upperLimit; ++index) {
+    desiredValues[index] = allValues[index];
+  }
 }
 
 
 // defines a function to get the value in every input field
 function getInputFieldValues(){
-  var inputs, index, allInputs;
+  var inputs, index;
+  var allInputs = [];
   inputs = document.getElementsByTagName('input');
   for (index = 0; index < inputs.length; ++index) {
     allInputs[index] = inputs;
@@ -83,8 +91,25 @@ function calculateDieRoll(qty, type, modifier) {
 // defines a function to calculate the results of the battle simulation
 function calculateOutput() {
   
-  // get the value of each input field
-  getInputFieldValues();
+  // create the players
+  if(!checkInput("attackerId") || !checkInput("defenderId")){
+    writeErrorMsg("You must enter values for the attacker and defender");
+  } else {
+    generatePlayer("attacker");
+    generatePlayer("defender");
+  }
+  
+  // do the analytics
+  alert("doing the maths...");
+}
+  
+// defines a function to check if a input field is empty
+function inputEmpty(inputId){
+  if(document.getElementById(inputId).value == "") {
+   return true; 
+  } else {
+    return false;
+  }
 }
 
 

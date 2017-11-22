@@ -43,6 +43,10 @@ body {
     background-color: rgba(0,0,0,0.2);
 }
 
+input:focus{
+  outline:none;
+}
+
 .accordion .ui-state-focus{
     outline: none;
 }
@@ -63,3 +67,4 @@ body {
 #errorMsg {
     color: red;
 }
+

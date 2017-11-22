@@ -117,12 +117,8 @@ function calculateDieRoll(qty, type, modifier) {
 // defines a function to calculate the results of the battle simulation
 function calculateOutput() {
   
-  alert("test 1");
-  
   // clear any errors
   writeErrorMsg("");
-  
-  alert("test 2"); 
   
   // create the players
   if(inputEmpty("attackerId") || inputEmpty("defenderId")){
@@ -131,8 +127,6 @@ function calculateOutput() {
     generatePlayer("attacker");
     generatePlayer("defender");
   }
-  
-  alert("test 3");
   
   // do the analytics
   //writeErrorMsg(attacker.buildName);

@@ -3,39 +3,24 @@
 */
 
 function generatePlayer(playerType){
-  // initialize vars
-  var buildNameVal = [], baseLims = [], modLims = [];
-  
-  // set the correct values based on the playerType
-  switch(playerType) {
-    alert("looking for player type");
-    case(playerType == "attacker"):
-      alert("creating attacker player");
-      buildNameVal = [0];
-      baseLims = [2,9];
-      modLims = [13,20];
-      break;
-      
-    case(playerType == "defender"):
-      alert("creating defender player");
-      buildNameVal = [26];
-      baseLims = [28,35];
-      modLims = [39,46];
-      break;
-  }
   
   // create a new player object and its properties
-  var player = { 
-    buildName: "buildNameTest",
-    test: "test"
-    //buildName: getDesiredValues(buildNameVal),
-    //attackType: getAttackType(),
-    //baseStats: getDesiredValues(baseLims),
-    //modifiedStats: getDesiredValues(modLims)
+  var attackingPlayer = { 
+    buildName: getDesiredValues([0]),
+    attackType: getAttackType(),
+    baseStats: getDesiredValues([2,9]),
+    modifiedStats: getDesiredValues([13,20])
+  }
+  
+  var defendingPlayer = {
+    buildName: getDesiredValues([26]),
+    attackType: getAttackType(),
+    baseStats: getDesiredValues([28,35]),
+    modifiedStats: getDesiredValues([39,46])
   }
 }
 
-/*
+
 // defines a function to separate out the desired input value
 function getDesiredValues(limits){
   var lowerLimit = limits[0];
@@ -113,11 +98,11 @@ function calculateDieRoll(qty, type, modifier) {
   return totalRoll;
 }
 
-*/
+
 // defines a function to calculate the results of the battle simulation
 function calculateOutput() {
   
-  alert("butt");
+  alert("calculating output");
   
   // clear any errors
   writeErrorMsg("");

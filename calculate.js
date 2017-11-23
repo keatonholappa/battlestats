@@ -120,13 +120,13 @@ function calculateOutput() {
   if(inputEmpty("attackerId") || inputEmpty("defenderId")){
     writeErrorMsg("You must enter values for the attacker and defender");
   } else {
-    generatePlayer("attacker");
-    generatePlayer("defender");
+    var attacker = generatePlayer("attacker");
+    var defender = generatePlayer("defender");
     
   }
   
   // do the analytics
-  writeErrorMsg(attacker.buildName);
+  createTable(attacker.baseStats);
 }
   
 
@@ -144,6 +144,7 @@ function inputEmpty(inputId){
 function writeErrorMsg(error) {
   document.getElementById("errorMsg").innerHTML = error;
 }
+
 
 function createTable(cells) {
   var numCells = cells.length;

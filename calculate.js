@@ -65,8 +65,8 @@ function getInputFieldValues(){
 function getInputIdsFromTable(tableId,rowNum) {
   var allInputIds = [];
   var row = document.getElementById(tableId).rows[rowNum];
-  for(var index = 0; index < row.length; ++index) {
-    allInputIds[index] = row.cells[index].id;
+  for(var index = 0; index < row.cells.length; ++index) {
+    allInputIds[index] = row.cells[index].children[0].id;
   }
   return allInputIds; 
 }

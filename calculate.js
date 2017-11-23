@@ -19,8 +19,6 @@ function generatePlayer(playerType){
   // get the name values
   var allNames = getValuesFromInputs(nameIds);  
   
-  alert("Base Stat Ids are: " + baseStatIds);
-  
   // create a new player object and its properties
   var player = { 
     playerType   : playerType,

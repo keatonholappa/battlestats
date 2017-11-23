@@ -17,11 +17,11 @@ function generatePlayer(playerType){
         var baseStatIds = getInputIdsFromTable("baseDefenceStatsTable",1);
         break;    
   }
-  
-  alert("calculated property values");
 
   // get the name values
   var allNames = getValuesFromInputs(nameIds);  
+  
+  alert("calculated ALL property values");
   
   // create a new player object and its properties
   var player = { 

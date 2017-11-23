@@ -123,7 +123,7 @@ function calculateOutput() {
     var defendingPlayer = generatePlayer("defender");
   }
   
-  alert(attackingPlayer.buildName);
+  alert("Input for BuildName is: " + attackingPlayer.buildName);
   
   // do the analytics
   createTable(attacker.baseStats);

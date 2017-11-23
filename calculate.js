@@ -4,7 +4,7 @@
 function generatePlayer(playerType){
   
   alert("generating player: " + playerType);
-  
+  /*
   // get all of the desired values
   switch(playerType) {
       case("attacker"):
@@ -29,11 +29,12 @@ function generatePlayer(playerType){
     charName     : nameIds[1],
     baseStats    : getValuesFromInputs(baseStatIds),
     weaponName   : nameIds[2],
-    numModAttacks: 0 /* integer for number of modified stats entered */,
-    modNames     : ["empty"] /* array of input fields after modified head */,
-    modStats     : [0] /* array of arrays of all modified stats */
+    numModAttacks: 0, // integer for number of modified stats entered
+    modNames     : ["empty"], // array of input fields after modified head
+    modStats     : [0] // array of arrays of all modified stats
   };
-  
+  */
+  var player = "test";
   return player;
 }
 

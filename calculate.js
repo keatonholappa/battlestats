@@ -32,7 +32,6 @@ function generatePlayer(playerType){
     modStats     : [0] // array of arrays of all modified stats
   };
   
-  alert(playerType + " generated");
   return player;
 }
 
@@ -122,8 +121,6 @@ function calculateOutput() {
     var attackingPlayer = generatePlayer("attacker");
     var defendingPlayer = generatePlayer("defender");
   }
-  
-  alert("Input is: " + attackingPlayer.baseStats);
   
   // do the analytics
   createTable("outputSection",attackingPlayer.baseStats);

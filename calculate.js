@@ -1,50 +1,48 @@
 /* This file contains the functions required to calculate the results of the battle simulation
 *
 */
-
-function generatePlayer(playerType,numStats,inputStats){
+function generatePlayer(playerType){
   
-  // separate inputStats
-  var inputBaseStats = inputStats[];
-  var inputModifiedStats = inputStats[];
+  // get all of the desired values
+  switch(playerType) {
+      case("attacker"):
+        var nameIds = ["attackerId","attackerBaseId","attackerWeaponId"];
+        var baseStatIds = getInputIdsFromTable("baseAttackStatsTable",1);
+        break;
+
+      case("defender"):
+        var nameIds = ["defenderId","defenderBaseId"];
+        var baseStatIds = getInputIdsFromTable("baseDefenceStatsTable",1);
+        break;    
+  }
+
+  // get the name values
+  var allNames = getValuesFromInputs(nameIds);  
   
   // create a new player object and its properties
   var player = { 
-  	playerId     : playerType,
-    buildName    : getDesiredValues(),
+    playerType   : playerType,
+    buildName    : nameIds[0],
     attackType   : getAttackType(),
-    baseStats    : getDesiredValues([inputBaseStats[0],inputBaseStats.length-1]),
-    modifiedStats: getDesiredValues([inputModifiedStats[0],inputModifiedStats.length-1])
+    charName     : nameIds[1],
+    baseStats    : getValuesFromInputs(baseStatIds),
+    weaponName   : nameIds[2],
+    numModAttacks: 0 /* integer for number of modified stats entered */,
+    modNames     : ["empty"] /* array of input fields after modified head */,
+    modStats     : [0] /* array of arrays of all modified stats */
   };
   
   return player;
 }
 
 
-// defines a function to separate out the desired input value
-function getDesiredValues(limits){
-  var lowerLimit = limits[0];
-  var upperLimit[];
-  
-  // if only 1 value is put into the function, correct for the for loop
-  if(limits[1] === undefined) {
-    upperLimit = lowerLimit + 1;
-  } else {
-    upperLimit = limits[1];
+// define a function to get values from all of the name input fields
+function getValuesFromInputs(inputIds) {
+  var allValues = [];
+  for(var index = 0; index < inputIds.length; ++index) {
+    allVales[index] = document.getElementById(inputIds[index]);
   }
-  
-  // get all values
-  var allValues = getInputFieldValues(); 
-  var desiredValues = [];
-  // get only the desired values
-  for (var index = lowerLimit; index < upperLimit; ++index) {
-    if(inputEmpty(allValues[index])){
-      writeErrorMsg(this.buildName + " is missing an input value.");
-      desiredValues[index] = 0;
-    } else {
-      desiredValues[index] = allValues[index];
-    }
-  }
+  return allValues;
 }
 
 
@@ -57,6 +55,17 @@ function getInputFieldValues(){
     allInputs[index] = inputs;
   }
   return allInputs;
+}
+
+
+// defines a function to get the Ids of all cells inside of a table
+function getInputIdsFromTable(tableId,rowNum) {
+  var allInputIds = [];
+  var row = document.getElementById(tableId).rows[rowNum];
+  for(var index = 0; index < row.length; ++index) {
+    allInputIds[index] = row.cell[index];
+  }
+  return allInputIds; 
 }
 
 

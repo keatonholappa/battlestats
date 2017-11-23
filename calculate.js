@@ -3,6 +3,8 @@
 */
 function generatePlayer(playerType){
   
+  alert("generating player: " + playerType);
+  
   // get all of the desired values
   switch(playerType) {
       case("attacker"):

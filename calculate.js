@@ -119,11 +119,11 @@ function calculateOutput() {
   if(inputEmpty("attackerId") || inputEmpty("defenderId")){
     writeErrorMsg("You must enter values for the attacker and defender");
   } else {
-    var attacker = generatePlayer("attacker");
-    var defender = generatePlayer("defender");
+    var attackingPlayer = generatePlayer("attacker");
+    var defendingPlayer = generatePlayer("defender");
   }
   
-  alert(attacker.baseStats);
+  alert(attackingPlayer.buildName);
   
   // do the analytics
   createTable(attacker.baseStats);

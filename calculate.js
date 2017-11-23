@@ -114,18 +114,16 @@ function calculateDieRoll(qty, type, modifier) {
 // defines a function to calculate the results of the battle simulation
 function calculateOutput() {
   
-  alert("test");
+  alert("Calculating outputs...");
   
   // clear any errors
   writeErrorMsg("");
   
   // create the players
-  var onePlayerNotFilled = (inputEmpty("attackerId") || inputEmpty("defenderId"));
-  alert("Is at least one field empty? " + onePlayerNotFilled);
-  
   if(inputEmpty("attackerId") || inputEmpty("defenderId")){
     writeErrorMsg("You must enter values for the attacker and defender");
   } else {
+    alert("creating players");
     var attacker = generatePlayer("attacker");
     var defender = generatePlayer("defender");
   }

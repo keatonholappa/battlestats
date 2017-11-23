@@ -3,8 +3,6 @@
 */
 function generatePlayer(playerType){
   
-  alert("Generating Player: " + playerType);
-  
   // get all of the desired values
   switch(playerType) {
       case("attacker"):
@@ -20,8 +18,6 @@ function generatePlayer(playerType){
 
   // get the name values
   var allNames = getValuesFromInputs(nameIds);  
-  
-  alert("calculated ALL property values");
   
   // create a new player object and its properties
   var player = { 
@@ -127,7 +123,6 @@ function calculateOutput() {
     var defender = generatePlayer("defender");
   }
   
-  alert("created players");
   alert(attacker.baseStats);
   
   // do the analytics

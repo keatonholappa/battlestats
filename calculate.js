@@ -2,22 +2,22 @@
 *
 */
 
-function generatePlayer(playerType){
+function generatePlayer(playerType,numStats,inputStats){
+  
+  // separate inputStats
+  var inputBaseStats = inputStats[];
+  var inputModifiedStats = inputStats[];
   
   // create a new player object and its properties
-  var attackingPlayer = { 
-    buildName: getDesiredValues([0]),
-    attackType: getAttackType(),
-    baseStats: getDesiredValues([2,9]),
-    modifiedStats: getDesiredValues([13,20])
+  var player = { 
+  	playerId     : playerType,
+    buildName    : getDesiredValues(),
+    attackType   : getAttackType(),
+    baseStats    : getDesiredValues([inputBaseStats[0],inputBaseStats.length-1]),
+    modifiedStats: getDesiredValues([inputModifiedStats[0],inputModifiedStats.length-1])
   };
   
-  var defendingPlayer = {
-    buildName: getDesiredValues([26]),
-    attackType: getAttackType(),
-    baseStats: getDesiredValues([28,35]),
-    modifiedStats: getDesiredValues([39,46])
-  };
+  return player;
 }
 
 
@@ -113,7 +113,7 @@ function calculateOutput() {
   } else {
     generatePlayer("attacker");
     generatePlayer("defender");
-    alert("generated players");
+    
   }
   
   // do the analytics
@@ -134,4 +134,23 @@ function inputEmpty(inputId){
 // defines a function to write the error to errorMsg
 function writeErrorMsg(error) {
   document.getElementById("errorMsg").innerHTML = error;
+}
+
+function createTable(cells) {
+  var numCells = cells.length;
+
+  var table = document.createElement("TABLE");
+  table.setAttribute("id", "myTable");
+  document.body.appendChild(table);
+
+  var y = document.createElement("TR");
+  y.setAttribute("id", "myTr");
+  document.getElementById("myTable").appendChild(y);
+
+  for(var index = 0; index < numCells; ++index) {
+    var z = document.createElement("TD");
+    var t = document.createTextNode(cells[index]);
+    z.appendChild(t);
+    document.getElementById("myTr").appendChild(z);
+  }
 }

@@ -65,7 +65,7 @@ function getInputIdsFromTable(tableId,rowNum) {
   var allInputIds = [];
   var row = document.getElementById(tableId).rows[rowNum];
   for(var index = 0; index < row.length; ++index) {
-    allInputIds[index] = row.cell[index];
+    allInputIds[index] = row.cells[index].id;
   }
   return allInputIds; 
 }
@@ -113,7 +113,7 @@ function calculateDieRoll(qty, type, modifier) {
 // defines a function to calculate the results of the battle simulation
 function calculateOutput() {
   
-  alert("calculating output now");
+  alert("now calculating output");
   
   // clear any errors
   writeErrorMsg("");

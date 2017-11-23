@@ -4,7 +4,7 @@
 function generatePlayer(playerType){
   
   alert("generating player: " + playerType);
-  /*
+  
   // get all of the desired values
   switch(playerType) {
       case("attacker"):
@@ -33,8 +33,7 @@ function generatePlayer(playerType){
     modNames     : ["empty"], // array of input fields after modified head
     modStats     : [0] // array of arrays of all modified stats
   };
-  */
-  var player = "test";
+  
   return player;
 }
 

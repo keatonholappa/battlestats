@@ -114,7 +114,7 @@ function calculateDieRoll(qty, type, modifier) {
 // defines a function to calculate the results of the battle simulation
 function calculateOutput() {
   
-  alert("now calculating output");
+  alert("test");
   
   // clear any errors
   writeErrorMsg("");

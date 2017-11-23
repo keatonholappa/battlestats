@@ -122,11 +122,14 @@ function calculateOutput() {
   } else {
     var attacker = generatePlayer("attacker");
     var defender = generatePlayer("defender");
-    
   }
+  
+  alert("created players");
+  alert(attacker.baseStats);
   
   // do the analytics
   createTable(attacker.baseStats);
+  alert("done");
 }
   
 

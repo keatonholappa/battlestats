@@ -10,14 +10,14 @@ function generatePlayer(playerType){
     attackType: getAttackType(),
     baseStats: getDesiredValues([2,9]),
     modifiedStats: getDesiredValues([13,20])
-  }
+  };
   
   var defendingPlayer = {
     buildName: getDesiredValues([26]),
     attackType: getAttackType(),
     baseStats: getDesiredValues([28,35]),
     modifiedStats: getDesiredValues([39,46])
-  }
+  };
 }
 
 

@@ -119,10 +119,9 @@ function calculateOutput() {
   // clear any errors
   writeErrorMsg("");
   
-  alert("just do it");
-  var attacker = generatePlayer("attacker");
-  
   // create the players
+  alert(inputEmpty("attackerId") || inputEmpty("defenderId"));
+  
   if(inputEmpty("attackerId") || inputEmpty("defenderId")){
     writeErrorMsg("You must enter values for the attacker and defender");
   } else {

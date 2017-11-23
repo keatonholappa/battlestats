@@ -19,6 +19,8 @@ function generatePlayer(playerType){
   // get the name values
   var allNames = getValuesFromInputs(nameIds);  
   
+  alert("Base Stat Ids are: " + baseStatIds);
+  
   // create a new player object and its properties
   var player = { 
     playerType   : playerType,
@@ -123,7 +125,7 @@ function calculateOutput() {
     var defendingPlayer = generatePlayer("defender");
   }
   
-  alert("Input for BuildName is: " + attackingPlayer.baseStats);
+  alert("Input is: " + attackingPlayer.baseStats);
   
   // do the analytics
   createTable("outputSection",attackingPlayer.baseStats);

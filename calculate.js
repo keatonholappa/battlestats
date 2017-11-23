@@ -149,7 +149,7 @@ function writeErrorMsg(error) {
 
 function createTable(divId,cells) {
   var numCells = cells.length;
-  var divSection = document.getElementById("divId");
+  var divSection = document.getElementById(divId);
 
   var table = document.createElement("TABLE");
   table.setAttribute("id", "myTable");

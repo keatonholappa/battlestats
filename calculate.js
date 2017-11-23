@@ -3,7 +3,7 @@
 */
 function generatePlayer(playerType){
   
-  alert("generating player: " + playerType);
+  alert("Generating Player: " + playerType);
   
   // get all of the desired values
   switch(playerType) {
@@ -34,6 +34,7 @@ function generatePlayer(playerType){
     modStats     : [0] // array of arrays of all modified stats
   };
   
+  alert(playerType + " generated");
   return player;
 }
 

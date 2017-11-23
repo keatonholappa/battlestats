@@ -17,6 +17,8 @@ function generatePlayer(playerType){
         var baseStatIds = getInputIdsFromTable("baseDefenceStatsTable",1);
         break;    
   }
+  
+  alert("calculated property values");
 
   // get the name values
   var allNames = getValuesFromInputs(nameIds);  
@@ -114,8 +116,6 @@ function calculateDieRoll(qty, type, modifier) {
 // defines a function to calculate the results of the battle simulation
 function calculateOutput() {
   
-  alert("Calculating outputs...");
-  
   // clear any errors
   writeErrorMsg("");
   
@@ -123,7 +123,6 @@ function calculateOutput() {
   if(inputEmpty("attackerId") || inputEmpty("defenderId")){
     writeErrorMsg("You must enter values for the attacker and defender");
   } else {
-    alert("creating players");
     var attacker = generatePlayer("attacker");
     var defender = generatePlayer("defender");
   }

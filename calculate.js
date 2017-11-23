@@ -120,7 +120,8 @@ function calculateOutput() {
   writeErrorMsg("");
   
   // create the players
-  alert(inputEmpty("attackerId") || inputEmpty("defenderId"));
+  var onePlayerNotFilled = (inputEmpty("attackerId") || inputEmpty("defenderId"));
+  alert("Is at least one field empty? " + onePlayerNotFilled);
   
   if(inputEmpty("attackerId") || inputEmpty("defenderId")){
     writeErrorMsg("You must enter values for the attacker and defender");

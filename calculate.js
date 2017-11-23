@@ -45,7 +45,7 @@ function generatePlayer(playerType){
 function getValuesFromInputs(inputIds) {
   var allValues = [];
   for(var index = 0; index < inputIds.length; ++index) {
-    allVales[index] = document.getElementById(inputIds[index]);
+    allValues[index] = document.getElementById(inputIds[index]).value;
   }
   return allValues;
 }

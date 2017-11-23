@@ -22,11 +22,11 @@ function generatePlayer(playerType){
   // create a new player object and its properties
   var player = { 
     playerType   : playerType,
-    buildName    : nameIds[0],
+    buildName    : allNames[0],
     attackType   : getAttackType(),
-    charName     : nameIds[1],
+    charName     : allNames[1],
     baseStats    : getValuesFromInputs(baseStatIds),
-    weaponName   : nameIds[2],
+    weaponName   : allNames[2],
     numModAttacks: 0, // integer for number of modified stats entered
     modNames     : ["empty"], // array of input fields after modified head
     modStats     : [0] // array of arrays of all modified stats
@@ -126,7 +126,7 @@ function calculateOutput() {
   alert("Input for BuildName is: " + attackingPlayer.buildName);
   
   // do the analytics
-  createTable(attacker.baseStats);
+  createTable("outputSection",attackingPlayer.baseStats);
   alert("done");
 }
   
@@ -134,7 +134,7 @@ function calculateOutput() {
 // defines a function to check if a input field is empty
 function inputEmpty(inputId){
   if(document.getElementById(inputId).value == "") {
-   return true; 
+    return true; 
   } else {
     return false;
   }
@@ -147,21 +147,18 @@ function writeErrorMsg(error) {
 }
 
 
-function createTable(cells) {
+function createTable(divId,cells) {
   var numCells = cells.length;
+  var divSection = document.getElementById("divId");
 
   var table = document.createElement("TABLE");
   table.setAttribute("id", "myTable");
   document.body.appendChild(table);
 
-  var y = document.createElement("TR");
-  y.setAttribute("id", "myTr");
-  document.getElementById("myTable").appendChild(y);
-
   for(var index = 0; index < numCells; ++index) {
     var z = document.createElement("TD");
     var t = document.createTextNode(cells[index]);
     z.appendChild(t);
-    document.getElementById("myTr").appendChild(z);
+    divSection.appendChild(z);
   }
 }

@@ -124,7 +124,7 @@ function calculateOutput() {
   
   // do the analytics
   createTable("outputSection",attackingPlayer.baseStats);
-  alert("done");
+
 }
   
 

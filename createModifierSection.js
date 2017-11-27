@@ -11,7 +11,15 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   // create the header with the input field
   var divTitle = document.createElement("H3");
   divTitle.className = "divTitle";
-  divTitle.innerHTML = "Modified " + divIdToAppendTo + ":";
+  var titleText;
+  switch (divIdToAppendTo) {
+    case "Attacker":
+      titleText = "Modified Attack: ";
+      break;
+    case "Defender":
+      titleText = "Modified Defence: "
+      break;
+  divTitle.innerHTML = titleText;
   
   var nameInput = document.createElement("INPUT");
   nameInput.setAttribute("type", "text");

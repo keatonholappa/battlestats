@@ -5,7 +5,7 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   alert(divIdToAppendTo);
   
   // increment the number of modifier sections
-  ++numModifiedSections;
+  ++numModifierSections;
   
   // create the accordion
   var accordionDiv = document.createElement("DIV");
@@ -52,7 +52,7 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   divToAppendTo.insertBefore(accordionDiv,divToAppendTo.childNodes[0]);
   
   // return the new number of modifier sections
-  return numMOdifierSections;
+  //return numMOdifierSections;
   
 }
 

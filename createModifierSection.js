@@ -49,6 +49,9 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   var lastChild = divToAppendTo.childNodes.length;
   divToAppendTo.insertBefore(accordionDiv,divToAppendTo.childNodes[lastChild]);
   
+  // remake the accordion
+  $("#accordion").append(html).accordion('destroy').accordion();
+  
   // return the new number of modifier sections
   //return numMOdifierSections;
   

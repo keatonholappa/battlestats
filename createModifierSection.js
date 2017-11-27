@@ -2,7 +2,7 @@
 function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections) {
   
   alert("test");
-  /*
+  
   // increment the number of modifier sections
   ++numModifierSections;
   
@@ -52,10 +52,10 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   
   // return the new number of modifier sections
   //return numMOdifierSections;
-  */
+  
 }
 
-/*
+
 // a function to fill a table with TR elements and cells
 function fillTable(parentTable, headerElements, tableType) {
   
@@ -124,4 +124,4 @@ function fillTable(parentTable, headerElements, tableType) {
     }
   }
 }
-*/
+

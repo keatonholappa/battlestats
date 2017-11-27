@@ -123,7 +123,7 @@ function calculateOutput() {
   }
   
   // do the analytics
-  createTable("outputSection",attackingPlayer.baseStats);
+  createTable("ofutputSection",attackingPlayer.baseStats);
 
 }
   

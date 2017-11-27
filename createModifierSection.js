@@ -11,7 +11,7 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   // create the header with the input field
   var divTitle = document.createElement("H3");
   divTitle.className = "divTitle";
-  var titleText;
+  var titleText = "";
   switch (divIdToAppendTo) {
     case "Attacker":
       titleText = "Modified Attack: ";
@@ -126,6 +126,7 @@ function fillTable(parentTable, headerElements, tableType) {
                   newOption.text = diceTypes[optionIndex];
                   selector.add(newOption);
                 }
+                newCell.appendChild(selector);
                 break;
               }
             }

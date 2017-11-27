@@ -98,7 +98,8 @@ function fillTable(parentTable, headerElements, tableType) {
               var newCell = newRow.insertCell(cellIndex);
               
               switch (cellIndex) {
-                case 0, 2:
+                case 0:
+                case 2:
                   var inputField = document.createElement("INPUT");
                   inputField.setAttribute("type", "text");
                   inputField.setAttribute("name", "input");

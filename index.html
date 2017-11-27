@@ -13,6 +13,7 @@
     $( function() {
       $( ".accordion" ).accordion({active: false, collapsible: true});
       } );
+      
   </script> 
     
     <h1> Welcome to BattleStats </h1>
@@ -118,66 +119,7 @@
         </div>
       </div>
         
-      <button id="addNewAttackMod" onClick="newModifiedInputField("Attacker")"> add Modified Attack </button>
-        
-      <div class="accordion">
-
-        <h3 class="divTitle"> Modified Attack: <input type="text" name="input" id="attackerModifierId" placeholder="Armor, Vehicle, Buff, etc."> </h3>
-        
-        <div>
-        
-          <table class="statsTable">
-            <tr>
-              <th>Speed</th>
-              <th>Strength</th>
-              <th>Melee Attack</th>
-              <th>Ranged Attack</th>
-              <th>Defense</th>
-              <th>Armor</th>
-              <th>Command</th>
-              <th>Total HP</th>
-            </tr>
-            <tr>
-              <th> <input type="text" name="input" id="atkSpd_Mod"> </th>
-              <th> <input type="text" name="input" id="atkStr_Mod"> </th>
-              <th> <input type="text" name="input" id="atkMel_Mod"> </th>
-              <th> <input type="text" name="input" id="atkRng_Mod"> </th>
-              <th> <input type="text" name="input" id="atkDef_Mod"> </th>
-              <th> <input type="text" name="input" id="atkArm_Mod"> </th>
-              <th> <input type="text" name="input" id="atkCmd_Mod"> </th>
-              <th> <input type="text" name="input" id="atkHP_Mod"> </th>
-            </tr>    
-          </table>
-          
-          <table class="statsTable">
-            <tr>
-              <th>Number of Dice</th>
-              <th>Type of Dice</th>
-              <th>Roll Modifier</th>
-
-            </tr>
-            <tr>
-              <th> <input type="text" name="input" id="modifiedAttackNumDice" value="0"> </th>
-              <th>
-                <select name = "dropdown" id="ModifiedAttackDice">
-                  <option value="d4">d4</option>
-                  <option value="d6">d6</option>
-                  <option value="d8">d8</option>
-                  <option value="d10">d10</option>
-                  <option value="d12">d12</option>
-                  <option value="d20">d20</option>
-                </select>
-              </th>
-              <th> <input type="text" name="input" id="modifiedAttackRollModifier"> </th>
-            </tr>    
-          </table>
-        
-        </div> 
-      </div>
-      
-    
-    </div>
-    
+      <button id="addNewAttackMod" onClick="newModifiedInputField("addNewAttackMod","attacker",0)"> add Modified Attack </button>
     
     <!-- Defender Section -->
     <div class="playerType" id="Defender">

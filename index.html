@@ -36,7 +36,7 @@
         <input type="radio" name="radioButton" id="rangedAttack" /> Ranged
       </div>
       
-      <div class="accordion">
+      <div class="accordion" id = "attackerAccordion">
       
         <h3 class="divTitle"> Base Attack: <input type="text" name="input" id="attackerBaseId" placeholder="Character Name"> </h3>
         <div>
@@ -120,7 +120,7 @@
         </div>
       </div>
         
-      <button id="addNewAttackMod" onClick="newModifiedInputSection('Attacker','attacker',0)"> add Modified Attack </button>
+      <button id="addNewAttackMod" onClick="newModifiedInputSection('attackerAccordion','attacker',0)"> add Modified Attack </button>
     </div>
     
     <!-- Defender Section -->

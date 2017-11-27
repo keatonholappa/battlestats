@@ -55,7 +55,7 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   */
 }
 
-
+/*
 // a function to fill a table with TR elements and cells
 function fillTable(parentTable, headerElements, tableType) {
   
@@ -124,3 +124,4 @@ function fillTable(parentTable, headerElements, tableType) {
     }
   }
 }
+*/

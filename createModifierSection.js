@@ -12,11 +12,11 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   divTitle.className = "divTitle";
   var titleText = "";
   switch (divIdToAppendTo) {
-    case "Attacker":
+    case "attackerAccordion":
       titleText = "Modified Attack: ";
       break;
       
-    case "Defender":
+    case "defenderAccordion":
       titleText = "Modified Defence: ";
       break
   }

@@ -17,7 +17,7 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
       titleText = "Modified Attack: ";
       break;
     case "Defender":
-      titleText = "Modified Defence: "
+      titleText = "Modified Defence: ";
       break;
   divTitle.innerHTML = titleText;
   

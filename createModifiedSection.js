@@ -1,5 +1,5 @@
 
-function newModifiedInputSection(divToAppendTo,sectionName,numModifierSections) {
+function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections) {
   
   // increment the number of modifier sections
   ++numModifiedSections;
@@ -45,6 +45,7 @@ function newModifiedInputSection(divToAppendTo,sectionName,numModifierSections) 
   divTitle.appendChild(nameInput);
   accordionDiv.appendChild(divTitle);
   accordionDiv.appendChild(foldingDiv);
+  var divToAppendTo = document.getElementById(divIdToAppendTo);
   divToAppendTo.insertBefore(accordionDiv,divToAppendTo.childNodes[0]);
   
   // return the new number of modifier sections

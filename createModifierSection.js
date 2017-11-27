@@ -2,8 +2,7 @@
 function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections) {
   
   alert("test");
-  alert(divIdToAppendTo);
-  
+  /*
   // increment the number of modifier sections
   ++numModifierSections;
   
@@ -53,7 +52,7 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   
   // return the new number of modifier sections
   //return numMOdifierSections;
-  
+  */
 }
 
 

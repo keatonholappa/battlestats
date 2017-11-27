@@ -46,8 +46,8 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   accordionDiv.appendChild(divTitle);
   accordionDiv.appendChild(foldingDiv);
   var divToAppendTo = document.getElementById(divIdToAppendTo);
-  var lastChild = divToAppendTo.childNodes.length
-  divToAppendTo.insertBefore(accordionDiv,divToAppendTo.childNodes[lastChild]);
+  var lastChild = divToAppendTo.childNodes.length;
+  divToAppendTo.insertBefore(accordionDiv,divToAppendTo.childNodes[lastChild-2]);
   
   // return the new number of modifier sections
   //return numMOdifierSections;

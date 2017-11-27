@@ -1,8 +1,6 @@
 
 function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections) {
   
-  alert("test");
-  
   // increment the number of modifier sections
   ++numModifierSections;
   
@@ -13,7 +11,7 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   // create the header with the input field
   var divTitle = document.createElement("H3");
   divTitle.className = "divTitle";
-  divTitle.innerHTML = sectionName;
+  divTitle.innerHTML = "Modified " + divIdToAppendTo + ":";
   
   var nameInput = document.createElement("INPUT");
   nameInput.setAttribute("type", "text");
@@ -42,8 +40,8 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   fillTable(rollTable, rollTableHeaderCells, "roll");
   
   // append the elements in the correct order
-  foldingDiv.appendChild(rollTable);
   foldingDiv.appendChild(statsTable);
+  foldingDiv.appendChild(rollTable);
   divTitle.appendChild(nameInput);
   accordionDiv.appendChild(divTitle);
   accordionDiv.appendChild(foldingDiv);

@@ -1,4 +1,3 @@
-
 function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections) {
   
   // increment the number of modifier sections
@@ -16,9 +15,11 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
     case "Attacker":
       titleText = "Modified Attack: ";
       break;
+      
     case "Defender":
       titleText = "Modified Defence: ";
-      break;
+      break
+  }
   divTitle.innerHTML = titleText;
   
   var nameInput = document.createElement("INPUT");
@@ -55,14 +56,11 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   accordionDiv.appendChild(foldingDiv);
   var divToAppendTo = document.getElementById(divIdToAppendTo);
   var lastChild = divToAppendTo.childNodes.length;
-  divToAppendTo.insertBefore(accordionDiv,divToAppendTo.childNodes[lastChild]);
-  
-  // remake the accordion
-  $(".accordion").append(html).accordion('destroy').accordion();
+  divToAppendTo.insertBefore(accordionDiv,divToAppendTo.childNodes[lastChild-2]);
   
   // return the new number of modifier sections
   //return numMOdifierSections;
-  
+
 }
 
 

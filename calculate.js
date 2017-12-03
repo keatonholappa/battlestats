@@ -1,16 +1,38 @@
 /* This file contains the functions required to calculate the results of the battle simulation
 *
 */
+
+
+// defines a function to calculate the results of the battle simulation
+function calculateOutput() {
+  
+  // clear any errors
+  writeErrorMsg("");
+  
+  // create the players
+  if(inputEmpty("attackerId") || inputEmpty("defenderId")){
+    writeErrorMsg("You must enter values for the attacker and defender");
+  } else {
+    var build1 = generatePlayer("build1");
+    var build2 = generatePlayer("build2");
+  }
+  
+  // do the analytics
+  createTable("outputSection",attackingPlayer.baseStats);
+
+}
+  
+
 function generatePlayer(playerType){
   
   // get all of the desired values
   switch(playerType) {
-      case("attacker"):
+      case("build1"):
         var nameIds = ["attackerId","attackerBaseId","attackerWeaponId"];
         var baseStatIds = getInputIdsFromTable("baseAttackStatsTable",1);
         break;
 
-      case("defender"):
+      case("build2"):
         var nameIds = ["defenderId","defenderBaseId"];
         var baseStatIds = getInputIdsFromTable("baseDefenceStatsTable",1);
         break;    
@@ -107,26 +129,6 @@ function calculateDieRoll(qty, type, modifier) {
   return totalRoll;
 }
 
-
-// defines a function to calculate the results of the battle simulation
-function calculateOutput() {
-  
-  // clear any errors
-  writeErrorMsg("");
-  
-  // create the players
-  if(inputEmpty("attackerId") || inputEmpty("defenderId")){
-    writeErrorMsg("You must enter values for the attacker and defender");
-  } else {
-    var attackingPlayer = generatePlayer("attacker");
-    var defendingPlayer = generatePlayer("defender");
-  }
-  
-  // do the analytics
-  createTable("outputSection",attackingPlayer.baseStats);
-
-}
-  
 
 // defines a function to check if a input field is empty
 function inputEmpty(inputId){

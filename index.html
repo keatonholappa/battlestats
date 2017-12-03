@@ -26,22 +26,22 @@
 
   <body>
     
-    <!-- Attacker Section -->
-    <div class="playerType" id="Attacker"> 
+    <!-- Build1 Section -->
+    <div class="playerType" id="Build1"> 
       <div class="typeHead">
-        <h2 class="divTitle"> Attacker: </h2>
-        <input type="text" name="input" id="attackerId" placeholder="Build Name">
+        <h2 class="divTitle"> Build 1: </h2>
+        <input type="text" name="input" id="build1" placeholder="Build Name">
         
-        <input type="radio" name="radioButton" id="meleeAttack"/> Melee
-        <input type="radio" name="radioButton" id="rangedAttack" /> Ranged
+        <input type="radio" name="radioButton" id="meleeAttack1"/> Melee
+        <input type="radio" name="radioButton" id="rangedAttack1" /> Ranged
       </div>
       
-      <div class="accordion" id = "attackerAccordion">
+      <div class="accordion" id="accordionBuild1">
       
-        <h3 class="divTitle"> Base Attack: <input type="text" name="input" id="attackerBaseId" placeholder="Character Name"> </h3>
+        <h3 class="divTitle"> Base Stats: <input type="text" name="input" id="build1BaseId" placeholder="Character Name"> </h3>
         <div>
         
-          <table class="statsTable" id="baseAttackStatsTable">
+          <table class="statsTable" id="baseStatsTable1">
             <tr>
               <th>Speed</th>
               <th>Strength</th>
@@ -53,18 +53,18 @@
               <th>Total HP</th>
             </tr>
             <tr>
-              <th> <input type="text" name="input" id="atkSpd"> </th>
-              <th> <input type="text" name="input" id="atkStr"> </th>
-              <th> <input type="text" name="input" id="atkMel"> </th>
-              <th> <input type="text" name="input" id="atkRng"> </th>
-              <th> <input type="text" name="input" id="atkDef"> </th>
-              <th> <input type="text" name="input" id="atkArm"> </th>
-              <th> <input type="text" name="input" id="atkCmd"> </th>
-              <th> <input type="text" name="input" id="atkHP"> </th>
+              <th> <input type="text" name="input" id="spd1"> </th>
+              <th> <input type="text" name="input" id="str1"> </th>
+              <th> <input type="text" name="input" id="mel1"> </th>
+              <th> <input type="text" name="input" id="rng1"> </th>
+              <th> <input type="text" name="input" id="def1"> </th>
+              <th> <input type="text" name="input" id="arm1"> </th>
+              <th> <input type="text" name="input" id="cmd1"> </th>
+              <th> <input type="text" name="input" id="hp1"> </th>
             </tr>    
           </table>
           
-          <table class="statsTable">
+          <table class="statsTable" id="baseRollTable1">
             <tr>
               <th>Number of Dice</th>
               <th>Type of Dice</th>
@@ -72,9 +72,9 @@
 
             </tr>
             <tr>
-              <th> <input type="text" name="input" id="attackNumDice" value="0"> </th>
+              <th> <input type="text" name="input" id="baseNumDice1" value="0"> </th>
               <th>
-                <select name = "dropdown" id="attackDice">
+                <select name = "dropdown" id="baseDiceTypeInput1">
                   <option value="d4">d4</option>
                   <option value="d6">d6</option>
                   <option value="d8">d8</option>
@@ -83,18 +83,18 @@
                   <option value="d20">d20</option>
                 </select>
               </th>
-              <th> <input type="text" name="input" id="attackRollModifier"> </th>
+              <th> <input type="text" name="input" id="baseRollModifier1"> </th>
             </tr>    
           </table>
         
         </div>
     
           
-        <h3 class="divTitle"> Weapon Damage: <input type="text" name="input" id="attackerWeaponId" placeholder="Weapon Name"> </h3>
+        <h3 class="divTitle"> Weapon Damage: <input type="text" name="input" id="build1WeaponId" placeholder="Weapon Name"> </h3>
         
         <div>
         
-          <table class="statsTable">
+          <table class="statsTable" id="weaponTable1">
             <tr>
               <th>Number of Dice</th>
               <th>Type of Dice</th>
@@ -102,9 +102,9 @@
 
             </tr>
             <tr>
-              <th> <input type="text" name="input" id="weaponNumDice" value="0"> </th>
+              <th> <input type="text" name="input" id="weaponNumDice1" value="0"> </th>
               <th>
-                <select name = "dropdown" id="weaponAttackDice">
+                <select name = "dropdown" id="weaponAttackDice1">
                   <option value="d4">d4</option>
                   <option value="d6">d6</option>
                   <option value="d8">d8</option>
@@ -113,29 +113,32 @@
                   <option value="d20">d20</option>
                 </select>
               </th>
-              <th> <input type="text" name="input" id="weaponRollModifier"> </th>
+              <th> <input type="text" name="input" id="weaponRollModifier1"> </th>
             </tr>    
           </table>
         
         </div>
       </div>
         
-      <button id="addNewAttackMod" onClick="newModifiedInputSection('attackerAccordion','attacker',0)"> add Modified Attack </button>
+      <button id="addNewModBuild1" onClick="newModifiedInputSection('accordionBuild1','build1',0)"> add Modified Stats </button>
     </div>
     
-    <!-- Defender Section -->
-    <div class="playerType" id="Defender">
+    <!-- Build2 Section --> 
+    <div class="playerType" id="Build2">
       <div class="typeHead">
         <h2 class="divTitle"> Defender: </h2>
-        <input type="text" name="input" id="defenderId" placeholder="Build Name">
+        <input type="text" name="input" id="build2" placeholder="Build Name">
+
+        <input type="radio" name="radioButton" id="meleeAttack2"/> Melee
+        <input type="radio" name="radioButton" id="rangedAttack2" /> Ranged
       </div>
       
-      <div class="accordion">
+      <div class="accordion" id="accordionBuild2">
       
-        <h3 class="divTitle"> Base Defence: <input type="text" name="input" id="defenderBaseId" placeholder="Character Name"> </h3>
+        <h3 class="divTitle"> Base Stats: <input type="text" name="input" id="build2BaseId" placeholder="Character Name"> </h3>
         <div>
         
-          <table class="statsTable" id="baseDefenceStatsTable">
+          <table class="statsTable" id="baseStatsTable2">
             <tr>
               <th>Speed</th>
               <th>Strength</th>
@@ -147,18 +150,18 @@
               <th>Total HP</th>
             </tr>
             <tr>
-              <th> <input type="text" name="input" id="defSpd"> </th>
-              <th> <input type="text" name="input" id="defStr"> </th>
-              <th> <input type="text" name="input" id="defMel"> </th>
-              <th> <input type="text" name="input" id="defRng"> </th>
-              <th> <input type="text" name="input" id="defDef"> </th>
-              <th> <input type="text" name="input" id="defArm"> </th>
-              <th> <input type="text" name="input" id="defCmd"> </th>
-              <th> <input type="text" name="input" id="defHP"> </th>
+              <th> <input type="text" name="input" id="spd2"> </th>
+              <th> <input type="text" name="input" id="str2"> </th>
+              <th> <input type="text" name="input" id="mel2"> </th>
+              <th> <input type="text" name="input" id="rng2"> </th>
+              <th> <input type="text" name="input" id="def2"> </th>
+              <th> <input type="text" name="input" id="arm2"> </th>
+              <th> <input type="text" name="input" id="cmd2"> </th>
+              <th> <input type="text" name="input" id="hp2"> </th>
             </tr>    
           </table>
           
-          <table class="statsTable">
+          <table class="statsTable" id="baseRollTable2">
             <tr>
               <th>Number of Dice</th>
               <th>Type of Dice</th>
@@ -166,9 +169,9 @@
 
             </tr>
             <tr>
-              <th> <input type="text" name="input" id="defenceNumDice" value="0"> </th>
+              <th> <input type="text" name="input" id="baseNumDice2" value="0"> </th>
               <th>
-                <select name = "dropdown" id="defenceDice">
+                <select name = "dropdown" id="baseDiceTypeInput2">
                   <option value="d4">d4</option>
                   <option value="d6">d6</option>
                   <option value="d8">d8</option>
@@ -177,40 +180,17 @@
                   <option value="d20">d20</option>
                 </select>
               </th>
-              <th> <input type="text" name="input" id="defenceRollModifier"> </th>
+              <th> <input type="text" name="input" id="baseRollModifier2"> </th>
             </tr>    
           </table>
         
         </div>
-        
-        <h3 class="divTitle"> Modified Defence: <input type="text" name="input" name="defenderModifierId" placeholder="Armor, Vehicle, Buff, etc."> </h3>
+
+        <h3 class="divTitle"> Weapon Damage: <input type="text" name="input" id="build2WeaponId" placeholder="Weapon Name"> </h3>
         
         <div>
         
-          <table class="statsTable">
-            <tr>
-              <th>Speed</th>
-              <th>Strength</th>
-              <th>Melee Attack</th>
-              <th>Ranged Attack</th>
-              <th>Defense</th>
-              <th>Armor</th>
-              <th>Command</th>
-              <th>Total HP</th>
-            </tr>
-            <tr>
-              <th> <input type="text" name="input" id="defSpd_Mod"> </th>
-              <th> <input type="text" name="input" id="defStr_Mod"> </th>
-              <th> <input type="text" name="input" id="defMel_Mod"> </th>
-              <th> <input type="text" name="input" id="defRng_Mod"> </th>
-              <th> <input type="text" name="input" id="defDef_Mod"> </th>
-              <th> <input type="text" name="input" id="defArm_Mod"> </th>
-              <th> <input type="text" name="input" id="defCmd_Mod"> </th>
-              <th> <input type="text" name="input" id="defHP_Mod"> </th>
-            </tr>    
-          </table>
-          
-          <table class="statsTable">
+          <table class="statsTable" id="weaponTable2">
             <tr>
               <th>Number of Dice</th>
               <th>Type of Dice</th>
@@ -218,9 +198,9 @@
 
             </tr>
             <tr>
-              <th> <input type="text" name="input" id="modifiedDefenceNumDice" value="0"> </th>
+              <th> <input type="text" name="input" id="weaponNumDice2" value="0"> </th>
               <th>
-                <select name = "dropdown" id="modifiedDefenceDice">
+                <select name = "dropdown" id="weaponAttackDice1">
                   <option value="d4">d4</option>
                   <option value="d6">d6</option>
                   <option value="d8">d8</option>
@@ -229,11 +209,13 @@
                   <option value="d20">d20</option>
                 </select>
               </th>
-              <th> <input type="text" name="input" id="modifiedDefenceRollModifier"> </th>
+              <th> <input type="text" name="input" id="weaponRollModifier2"> </th>
             </tr>    
           </table>
         
         </div>
+        
+        
       </div>
     </div>
     
@@ -242,7 +224,7 @@
       <div class="typeHead" id="outputHead">
         <h2 class="divTitle"> Output: </h2>
         <h4> Enter number of battles to simulate: </h4>
-        <input type="text" name="input" id="defMel" placeholder="Enter 1-1000">
+        <input type="text" name="input" id="inputNumBattles" placeholder="Enter 1-1000">
         <button id="calculateButton" onClick="calculateOutput()"> Calculate </button>
         <button id="clearFormButton" onClick="clearForm()"> Clear Form </button>
         <p id= "errorMsg"> </p>

@@ -19,22 +19,31 @@ function calculateOutput() {
   
   // do the analytics
   createTable("outputSection",attackingPlayer.baseStats);
+  //doAnalytics(build1, build2);
+
+}
+
+
+// defines a function to do the analytics and print them to the Results section of the HTML
+function doAnalytics(player1, player2){
+
 
 }
   
 
+// defines a function to generate a player object, and populate the player with the stats from the input fields
 function generatePlayer(playerType){
   
   // get all of the desired values
   switch(playerType) {
       case("build1"):
-        var nameIds = ["attackerId","attackerBaseId","attackerWeaponId"];
-        var baseStatIds = getInputIdsFromTable("baseAttackStatsTable",1);
+        var nameIds = ["build1","build1BaseId","build1WeaponId"];
+        var baseStatIds = getInputIdsFromTable("baseStatsTable1",1);
         break;
 
       case("build2"):
-        var nameIds = ["defenderId","defenderBaseId"];
-        var baseStatIds = getInputIdsFromTable("baseDefenceStatsTable",1);
+        var nameIds = ["build2","build2BaseId","build2WeaponId"];
+        var baseStatIds = getInputIdsFromTable("baseStatsTable2",1);
         break;    
   }
 

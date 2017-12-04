@@ -19,20 +19,209 @@ function calculateOutput() {
   
   // do the analytics
   createTable("outputSection",attackingPlayer.baseStats);
-  //doAnalytics(build1, build2);
+  doAnalytics(build1, build2);
 
 }
 
 
 // defines a function to do the analytics and print them to the Results section of the HTML
-function doAnalytics(player1, player2){
+function doAnalytics(player1, player2) {
+  // get the number of battles that should performed
+  var numBattles = document.getElementById("inputNumBattles").value;
 
-
+  // perform the battles
+  var battleComplete = 0;
+  while (!battleComplete) {
+    var battleResults = doBattle(player1,player2,numBattles);
+    battleComplete = battleResults.complete;
+  }
 }
+
+
+// defines a function to do a single battle
+function doBattle(player1,player2,numBattles) {
+  // define which stats are which in the baseStats array
+  var stats = {
+    speed         : 0;
+    strength      : 1;
+    meleeAttack   : 2;
+    rangedAttack  : 3;
+    defense       : 4;
+    armor         : 5;
+    command       : 6;
+    hp            : 7;
+  }
+
+  var finalResults = {
+    player1NumWins        : [];
+    player1DmgPerTurn     : [];
+    player1AvgDmgPerTurn  : [];
+    player1HitsToDeath    : [];
+    player1AvgHitsToDeath : [];
+    player1Accuracy       : [];
+    player1AvgAccuracy    : [];
+
+    player2NumWins        : [];
+    player2DmgPerTurn     : [];
+    player2AvgDmgPerTurn  : [];
+    player2HitsToDeath    : [];
+    player2AvgHitsToDeath : [];
+    player2Accuracy       : [];
+    player2AvgAccuracy    : [];
+
+
+    avgNumRounds          : [];
+    complete              : 0;
+  }
+
+  var player1RunningResults = {
+    damageDealt     : [];
+    successfulHits  : [];
+  };
+  var player2RunningResults = {
+    damageDealt     : [];
+    successfulHits  : [];
+  };
+
+  // keep performing turns until one player is dead
+  var counter = 0;
+  var listNumRounds = [];
+  // keep running battles until numBattles is reached
+  while (counter < numBattles) {
+    
+    // do a single battle
+    var battleRounds = 0;
+
+    // create attacking and defending players, player 1 attacks first
+    var attackingPlayer = {
+      player        : player1;
+      hp            : player1.baseStats[stats.hp];
+      baseRollTable : "baseRollTable1";
+      weaponTable   : "weaponTable1";
+    }
+
+    var defendingPlayer = {
+      player        : player2;
+      hp            : player2.baseStats[stats.hp];
+      baseRollTable : "baseRollTable2";
+      weaponTable   : "weaponTable2";
+    }
+
+    // loop for the battle, until a player has no health left
+    while (player1.stats.hp > 0 || player2.stats.hp > 0) {
+      // get the base roll for attackingPlayer
+      var attackRoll = attackingPlayer.baseStats[attackingPlayer.player.attackType] + calculateDieRoll(attackingPlayer.baseRollTable);
+      // get the base roll for player 2
+      var defenseRoll= defendingPlayer.baseStats[stats.defense]+ calcualteDieRoll(defendingPlayer.baseRollTable);
+      // check if player 1 hit player 2
+      var hit = 0;
+      if (attackRoll > defenseRoll) {
+        hit = 1;
+        // roll for damage
+        var damage = calculateDieRoll(attackingPlayer.weaponTable);
+
+        // deduct the damage from the HP of defendingPlayer
+        defendingPlayer.hp = defendingPlayer.baseStats[defensePlayer.player.hp] - damage;
+      } 
+
+      // with an attack attempt made, swap the players
+      var a = attackingPlayer;
+      var b = defendingPlayer;
+      a.player = [b.player, b.player=a.player][0];
+      a.baseRollTable = [b.baseRollTable, b.baseRollTable=a.baseRollTable][0];
+      a.weaponTable = [b.weaponTable, b.weaponTable=a.weaponTable][0];
+      a = [b, b=a][0]; 
+
+      // increment the battleRounds
+      ++battleRounds;
+      listNumRounds.push(battleRounds);
+
+      // get the stats for the round
+      // player 1 attacked this round
+      if (isOdd(battleRounds)) {
+        // if this would be the last round, who would win?
+        ++finalResults.player1NumWins;
+        // how much damage was dealt?
+        player1RunningResults.damageDealt.push(damage);
+        // update the hit counter
+        player1RunningResults.successfulHits.push(hit);
+
+      // player 2 attacked this round
+      } else if (!isOdd(battleRounds)) {
+        // if this would be the last round, who would win?
+        ++finalResults.player2NumWins;
+        // how much damage was dealt?
+        player2RunningResults.damageDealt.push(damage);
+        // update the hit counter
+        player2RunningResults.successfulHits.push(hit);
+
+      } else {
+        // throw an error, this should never happen
+        alert("error in calculating battle winner");
+      }
+    }
+
+    // get the battle stats
+
+    player1NumWins        : [];
+    player1DmgPerTurn     : [];
+    player1AvgDmgPerTurn  : [];
+    player1HitsToDeath    : [];
+    player1AvgHitsToDeath : [];
+    player1Accuracy       : [];
+    player1AvgAccuracy    : [];
+
+    // create an array of the damage dealt per turn
+    finalResults.player1DmgPerTurn.push(avg(player1RunningResults.damageDealt));
+    finalResults.player2DmgPerTurn.push(avg(player2RunningResults.damageDealt));
+
+    // create an array of the number of hits taken until each player died
+
+    
+
+    // get the accuracy of each player
+
+    
+
+    // with a battle performed, update the results stats
+
+ 
+    // increment the counter for each battle performed
+    ++counter;
+  }
+
+  // get the average number of hits taken until the player died
+
+
+  // get the average accuracy of each player
   
 
+  // get the average number of rounds performed for every battle
+  finalResults.avgNumRounds = avg(listNumRounds);
+
+  // with the calculation performed, return the results
+  finalResults.complete = 1;
+  return results;
+
+}
+
+
+// defines a function to determine if a number is odd
+function isOdd(num) { return num % 2;}
+  
+
+// defines a function to get the average value of an array
+function avg(array) {
+  var total = 0;
+  for (var index = 0; index < array.length; ++index;) {
+      total+= arrayu[index];
+  }
+  var avg = total/array.length;
+  return avg;
+}
+
 // defines a function to generate a player object, and populate the player with the stats from the input fields
-function generatePlayer(playerType){
+function generatePlayer(playerType) {
   
   // get all of the desired values
   switch(playerType) {
@@ -78,7 +267,7 @@ function getValuesFromInputs(inputIds) {
 
 
 // defines a function to get the value in every input field
-function getInputFieldValues(){
+function getInputFieldValues() {
   var inputs, index;
   var allInputs = [];
   inputs = document.getElementsByTagName('input');
@@ -120,14 +309,18 @@ function getAttackType() {
 
 
 // defines a function to roll a die
-function calculateDieRoll(qty, type, modifier) { 
-  // correct for the d# value
-  type = type.replace('d','');
+function calculateDieRoll(tableId) { 
+  var allTableIds = getInputIdsFromTable(tableId,1);
+  //get all the values
+  var values = [];
+  for (var index = 0; index < allTableIds.length; ++index) {
+    values = document.getElementById(allTableIds[index]).value;
+  }
   
   // ensure values are numbers
-  qty = Number(qty);
-  type = Number(type);
-  modifier = Number(modifier);
+  var qty = Number(values[0]);
+  var type = Number(values[1].replace('d',''));
+  var modifier = Number(values[2]);
   
   // loop for qty and roll die/dice
   var totalRoll = 0;
@@ -140,7 +333,7 @@ function calculateDieRoll(qty, type, modifier) {
 
 
 // defines a function to check if a input field is empty
-function inputEmpty(inputId){
+function inputEmpty(inputId) {
   if(document.getElementById(inputId).value == "") {
     return true; 
   } else {

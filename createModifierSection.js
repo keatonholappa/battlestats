@@ -10,7 +10,7 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   // create the header with the input field
   var divTitle = document.createElement("H3");
   divTitle.className = "divTitle";
-  var titleText = "Modified Stats";
+  var titleText = "Modified Stats: ";
   divTitle.innerHTML = titleText;
   
   var nameInput = document.createElement("INPUT");
@@ -28,7 +28,7 @@ function newModifiedInputSection(divIdToAppendTo,sectionName,numModifierSections
   statsTable.className = "statsTable";
   var statsTableId = sectionName + "ModifierStatsTable_" + numModifierSections;
   statsTable.setAttribute("id",statsTableId);
-  var statsTableHeaderCells = ["Speed","Strength","Melee Attack","Ranged Attack","Defense","Armor","Commadn","Total HP"];
+  var statsTableHeaderCells = ["Speed","Strength","Melee Attack","Ranged Attack","Defense","Armor","Command","Total HP"];
   fillTable(statsTable, statsTableHeaderCells, "stats");
   
   // create the diceTable

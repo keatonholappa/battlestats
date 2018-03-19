@@ -41,82 +41,85 @@
         <h3 class="divTitle"> Base Stats: <input type="text" name="input" id="build1BaseId" placeholder="Character Name"> </h3>
         <div>
         
-          <table class="statsTable" id="baseStatsTable1">
-            <tr>
-              <th>Speed</th>
-              <th>Strength</th>
-              <th>Melee Attack</th>
-              <th>Ranged Attack</th>
-              <th>Defense</th>
-              <th>Armor</th>
-              <th>Command</th>
-              <th>Total HP</th>
-            </tr>
-            <tr>
-              <th> <input type="text" name="input" id="spd1"> </th>
-              <th> <input type="text" name="input" id="str1"> </th>
-              <th> <input type="text" name="input" id="mel1"> </th>
-              <th> <input type="text" name="input" id="rng1"> </th>
-              <th> <input type="text" name="input" id="def1"> </th>
-              <th> <input type="text" name="input" id="arm1"> </th>
-              <th> <input type="text" name="input" id="cmd1"> </th>
-              <th> <input type="text" name="input" id="hp1"> </th>
-            </tr>    
-          </table>
-          
-          <table class="statsTable" id="baseRollTable1">
-            <tr>
-              <th>Number of Dice</th>
-              <th>Type of Dice</th>
-              <th>Roll Modifier</th>
+          <form id="Build1StatsForm">
+            <table class="statsTable" id="baseStatsTable1">
+              <tr>
+                <th>Speed</th>
+                <th>Strength</th>
+                <th>Melee Attack</th>
+                <th>Ranged Attack</th>
+                <th>Defense</th>
+                <th>Armor</th>
+                <th>Command</th>
+                <th>Total HP</th>
+              </tr>
+              <tr>
+                <th> <input type="text" name="input" id="spd1"> </th>
+                <th> <input type="text" name="input" id="str1"> </th>
+                <th> <input type="text" name="input" id="mel1"> </th>
+                <th> <input type="text" name="input" id="rng1"> </th>
+                <th> <input type="text" name="input" id="def1"> </th>
+                <th> <input type="text" name="input" id="arm1"> </th>
+                <th> <input type="text" name="input" id="cmd1"> </th>
+                <th> <input type="text" name="input" id="hp1"> </th>
+              </tr>    
+            </table>
+            
+            <table class="statsTable" id="baseRollTable1">
+              <tr>
+                <th>Number of Dice</th>
+                <th>Type of Dice</th>
+                <th>Roll Modifier</th>
 
-            </tr>
-            <tr>
-              <th> <input type="text" name="input" id="baseNumDice1" value="0"> </th>
-              <th>
-                <select name = "dropdown" id="baseDiceTypeInput1">
-                  <option value="d4">d4</option>
-                  <option value="d6">d6</option>
-                  <option value="d8">d8</option>
-                  <option value="d10">d10</option>
-                  <option value="d12">d12</option>
-                  <option value="d20">d20</option>
-                </select>
-              </th>
-              <th> <input type="text" name="input" id="baseRollModifier1"> </th>
-            </tr>    
-          </table>
-        
+              </tr>
+              <tr>
+                <th> <input type="text" name="input" id="baseNumDice1" value="0"> </th>
+                <th>
+                  <select name = "dropdown" id="baseDiceTypeInput1">
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option>
+                    <option value="d20">d20</option>
+                  </select>
+                </th>
+                <th> <input type="text" name="input" id="baseRollModifier1"> </th>
+              </tr>    
+            </table>
+          </form>
         </div>
     
           
         <h3 class="divTitle"> Weapon Damage: <input type="text" name="input" id="build1WeaponId" placeholder="Weapon Name"> </h3>
         
         <div>
-        
-          <table class="statsTable" id="weaponTable1">
-            <tr>
-              <th>Number of Dice</th>
-              <th>Type of Dice</th>
-              <th>Roll Modifier</th>
 
-            </tr>
-            <tr>
-              <th> <input type="text" name="input" id="weaponNumDice1" value="0"> </th>
-              <th>
-                <select name = "dropdown" id="weaponAttackDice1">
-                  <option value="d4">d4</option>
-                  <option value="d6">d6</option>
-                  <option value="d8">d8</option>
-                  <option value="d10">d10</option>
-                  <option value="d12">d12</option>
-                  <option value="d20">d20</option>
-                </select>
-              </th>
-              <th> <input type="text" name="input" id="weaponRollModifier1"> </th>
-            </tr>    
-          </table>
+          <form id="Build1WeaponForm">
         
+            <table class="statsTable" id="weaponTable1">
+              <tr>
+                <th>Number of Dice</th>
+                <th>Type of Dice</th>
+                <th>Roll Modifier</th>
+
+              </tr>
+              <tr>
+                <th> <input type="text" name="input" id="weaponNumDice1" value="0"> </th>
+                <th>
+                  <select name = "dropdown" id="weaponAttackDice1">
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option>
+                    <option value="d20">d20</option>
+                  </select>
+                </th>
+                <th> <input type="text" name="input" id="weaponRollModifier1"> </th>
+              </tr>    
+            </table>
+          </form>
         </div>
       </div>
         
@@ -138,81 +141,84 @@
         <h3 class="divTitle"> Base Stats: <input type="text" name="input" id="build2BaseId" placeholder="Character Name"> </h3>
         <div>
         
-          <table class="statsTable" id="baseStatsTable2">
-            <tr>
-              <th>Speed</th>
-              <th>Strength</th>
-              <th>Melee Attack</th>
-              <th>Ranged Attack</th>
-              <th>Defense</th>
-              <th>Armor</th>
-              <th>Command</th>
-              <th>Total HP</th>
-            </tr>
-            <tr>
-              <th> <input type="text" name="input" id="spd2"> </th>
-              <th> <input type="text" name="input" id="str2"> </th>
-              <th> <input type="text" name="input" id="mel2"> </th>
-              <th> <input type="text" name="input" id="rng2"> </th>
-              <th> <input type="text" name="input" id="def2"> </th>
-              <th> <input type="text" name="input" id="arm2"> </th>
-              <th> <input type="text" name="input" id="cmd2"> </th>
-              <th> <input type="text" name="input" id="hp2"> </th>
-            </tr>    
-          </table>
-          
-          <table class="statsTable" id="baseRollTable2">
-            <tr>
-              <th>Number of Dice</th>
-              <th>Type of Dice</th>
-              <th>Roll Modifier</th>
+          <form id="Build2StatsForm">
+            <table class="statsTable" id="baseStatsTable2">
+              <tr>
+                <th>Speed</th>
+                <th>Strength</th>
+                <th>Melee Attack</th>
+                <th>Ranged Attack</th>
+                <th>Defense</th>
+                <th>Armor</th>
+                <th>Command</th>
+                <th>Total HP</th>
+              </tr>
+              <tr>
+                <th> <input type="text" name="input" id="spd2"> </th>
+                <th> <input type="text" name="input" id="str2"> </th>
+                <th> <input type="text" name="input" id="mel2"> </th>
+                <th> <input type="text" name="input" id="rng2"> </th>
+                <th> <input type="text" name="input" id="def2"> </th>
+                <th> <input type="text" name="input" id="arm2"> </th>
+                <th> <input type="text" name="input" id="cmd2"> </th>
+                <th> <input type="text" name="input" id="hp2"> </th>
+              </tr>    
+            </table>
+            
+            <table class="statsTable" id="baseRollTable2">
+              <tr>
+                <th>Number of Dice</th>
+                <th>Type of Dice</th>
+                <th>Roll Modifier</th>
 
-            </tr>
-            <tr>
-              <th> <input type="text" name="input" id="baseNumDice2" value="0"> </th>
-              <th>
-                <select name = "dropdown" id="baseDiceTypeInput2">
-                  <option value="d4">d4</option>
-                  <option value="d6">d6</option>
-                  <option value="d8">d8</option>
-                  <option value="d10">d10</option>
-                  <option value="d12">d12</option>
-                  <option value="d20">d20</option>
-                </select>
-              </th>
-              <th> <input type="text" name="input" id="baseRollModifier2"> </th>
-            </tr>    
-          </table>
-        
+              </tr>
+              <tr>
+                <th> <input type="text" name="input" id="baseNumDice2" value="0"> </th>
+                <th>
+                  <select name = "dropdown" id="baseDiceTypeInput2">
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option>
+                    <option value="d20">d20</option>
+                  </select>
+                </th>
+                <th> <input type="text" name="input" id="baseRollModifier2"> </th>
+              </tr>    
+            </table>
+          </form>
         </div>
 
         <h3 class="divTitle"> Weapon Damage: <input type="text" name="input" id="build2WeaponId" placeholder="Weapon Name"> </h3>
         
         <div>
-        
-          <table class="statsTable" id="weaponTable2">
-            <tr>
-              <th>Number of Dice</th>
-              <th>Type of Dice</th>
-              <th>Roll Modifier</th>
 
-            </tr>
-            <tr>
-              <th> <input type="text" name="input" id="weaponNumDice2" value="0"> </th>
-              <th>
-                <select name = "dropdown" id="weaponAttackDice1">
-                  <option value="d4">d4</option>
-                  <option value="d6">d6</option>
-                  <option value="d8">d8</option>
-                  <option value="d10">d10</option>
-                  <option value="d12">d12</option>
-                  <option value="d20">d20</option>
-                </select>
-              </th>
-              <th> <input type="text" name="input" id="weaponRollModifier2"> </th>
-            </tr>    
-          </table>
+          <form id="Build2WeaponForm">
         
+            <table class="statsTable" id="weaponTable2">
+              <tr>
+                <th>Number of Dice</th>
+                <th>Type of Dice</th>
+                <th>Roll Modifier</th>
+
+              </tr>
+              <tr>
+                <th> <input type="text" name="input" id="weaponNumDice2" value="0"> </th>
+                <th>
+                  <select name = "dropdown" id="weaponAttackDice1">
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option>
+                    <option value="d20">d20</option>
+                  </select>
+                </th>
+                <th> <input type="text" name="input" id="weaponRollModifier2"> </th>
+              </tr>    
+            </table>
+          </form>
         </div>
         
         

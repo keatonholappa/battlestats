@@ -243,10 +243,10 @@ function generatePlayer(playerType) {
   var allNames = getValuesFromInputs(nameIds);  
   
   // create a new player object and its properties
-  var player = { 
+  var player = {
     playerType   : playerType,
     buildName    : allNames[0],
-    attackType   : getAttackType(),
+    attackType   : getAttackType(playerType),
     charName     : allNames[1],
     baseStats    : getValuesFromInputs(baseStatIds),
     weaponName   : allNames[2],
@@ -293,15 +293,17 @@ function getInputIdsFromTable(tableId,rowNum) {
 
 
 // defines a function to determine if the attacker is using melee or ranged attacks
-function getAttackType() {
+function getAttackType(playerType) {
   var meleeAttack, rangedAttack, attackType;
-  meleeAttack = document.getElementById('meleeAttack');
-  rangedAttack = document.getElementById('rangedAttack');
+  meleeAttack1 = document.getElementById('meleeAttack1');
+  meleeAttack2 = document.getElementById('meleeAttack2');
+  rangedAttack1 = document.getElementById('rangedAttack1');
+  rangedAttack2 = document.getElementById('rangedAttack2');
   
   // get which one is selected
-  if (meleeAttack.checked == true) {
+  if ((meleeAttack1.checked == true && playerType == "build1") || (meleeAttack2.checked == true || playerType == "build2")) {
     attackType = "melee";
-  } else if (rangedAttack.checked == true) {
+  } else if ((rangedAttack1.checked == true && playerType == "build1") || rangedAttack2.checked == true || playerType == "build2")) {
     attackType = "ranged";
   } else {
     writeErrorMsg("Please select and Attack Type");

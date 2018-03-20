@@ -41,6 +41,9 @@ function doAnalytics(player1, player2) {
 // defines a function to do a single battle
 function doBattle(player1,player2,numBattles) {
   // define which stats are which in the baseStats array
+  
+  alert(player1.baseStats);
+  
   var stats = {
     speed         : 0;
     strength      : 1;
